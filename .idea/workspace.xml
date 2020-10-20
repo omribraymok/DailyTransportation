@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/DailyTransportation-.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-    </list>
+    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="test commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,6 +80,28 @@
       <option name="presentableId" value="Default" />
       <updated>1603179487814</updated>
     </task>
+    <task id="LOCAL-00001" summary="test commit">
+      <created>1603179624365</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603179624365</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test commit">
+      <created>1603179663116</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603179663116</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test commit">
+      <created>1603179694804</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603179694804</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,11 +117,33 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="test commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="351" y="0" key="#demo" timestamp="1603179557447">
       <screen x="0" y="0" width="1280" height="661" />
     </state>
     <state x="351" y="0" key="#demo/0.0.1280.661@0.0.1280.661" timestamp="1603179557447" />
+    <state width="1259" height="168" key="GridCell.Tab.0.bottom" timestamp="1603179811369">
+      <screen x="0" y="0" width="1280" height="661" />
+    </state>
+    <state width="1259" height="168" key="GridCell.Tab.0.bottom/0.0.1280.661@0.0.1280.661" timestamp="1603179811369" />
+    <state width="1259" height="168" key="GridCell.Tab.0.center" timestamp="1603179811369">
+      <screen x="0" y="0" width="1280" height="661" />
+    </state>
+    <state width="1259" height="168" key="GridCell.Tab.0.center/0.0.1280.661@0.0.1280.661" timestamp="1603179811369" />
+    <state width="1259" height="168" key="GridCell.Tab.0.left" timestamp="1603179811369">
+      <screen x="0" y="0" width="1280" height="661" />
+    </state>
+    <state width="1259" height="168" key="GridCell.Tab.0.left/0.0.1280.661@0.0.1280.661" timestamp="1603179811369" />
+    <state width="1259" height="168" key="GridCell.Tab.0.right" timestamp="1603179811369">
+      <screen x="0" y="0" width="1280" height="661" />
+    </state>
+    <state width="1259" height="168" key="GridCell.Tab.0.right/0.0.1280.661@0.0.1280.661" timestamp="1603179811369" />
+    <state x="233" y="64" key="Vcs.Push.Dialog.v2" timestamp="1603179844162">
+      <screen x="0" y="0" width="1280" height="661" />
+    </state>
+    <state x="233" y="64" key="Vcs.Push.Dialog.v2/0.0.1280.661@0.0.1280.661" timestamp="1603179844162" />
   </component>
 </project>
