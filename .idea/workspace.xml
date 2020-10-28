@@ -19,11 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="class car update">
-      <change afterPath="$PROJECT_DIR$/clAccom.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clChild.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clSchool.py" afterDir="false" />
+    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="classes update">
+      <change afterPath="$PROJECT_DIR$/clHuman.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clAccom.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clChild.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603799279635</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="classes update">
+      <created>1603810879883</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603810879883</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,7 +211,8 @@
     <MESSAGE value="test commit" />
     <MESSAGE value="class car" />
     <MESSAGE value="class car update" />
-    <option name="LAST_COMMIT_MESSAGE" value="class car update" />
+    <MESSAGE value="classes update" />
+    <option name="LAST_COMMIT_MESSAGE" value="classes update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603621405516">
@@ -248,19 +256,23 @@
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.661@0.0.1280.661" timestamp="1603180552608" />
     <state x="170" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603621366676" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1603799287963">
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1603810886952">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="233" y="64" key="Vcs.Push.Dialog.v2/0.0.1280.661@0.0.1280.661" timestamp="1603180570633" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603799287963" />
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603810886952" />
     <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603181276414">
       <screen x="0" y="0" width="1280" height="661" />
     </state>
     <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.661@0.0.1280.661" timestamp="1603181276414" />
-    <state x="-1714" y="118" width="1267" height="592" key="dock-window-1" timestamp="1603810486043">
+    <state x="-1447" y="76" width="1267" height="585" key="dock-window-1" timestamp="1603877058375">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1714" y="118" width="1267" height="592" key="dock-window-1/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603810486043" />
+    <state x="-1447" y="76" width="1267" height="585" key="dock-window-1/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603877058375" />
+    <state x="362" y="74" width="1267" height="585" key="dock-window-2" timestamp="1603877058375">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="362" y="74" width="1267" height="585" key="dock-window-2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603877058375" />
     <state x="459" y="221" key="git4idea.merge.GitPullDialog" timestamp="1603182752126">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
