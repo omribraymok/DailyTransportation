@@ -1,4 +1,4 @@
-class Child:
+class School:
 
     def __init__(self, id, name, address, contacts, v_time):
         self.id = id
