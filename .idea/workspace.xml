@@ -19,11 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="classes update">
-      <change afterPath="$PROJECT_DIR$/clContacts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clNeeds.py" afterDir="false" />
+    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="classes update - adding class contacts and fix school">
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clSchool.py" beforeDir="false" afterPath="$PROJECT_DIR$/clSchool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clCar.py" beforeDir="false" afterPath="$PROJECT_DIR$/clCar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clHuman.py" beforeDir="false" afterPath="$PROJECT_DIR$/clHuman.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.clCar">
+  <component name="RunManager" selected="Python.main">
     <configuration name="clCar" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DailyTransportation-" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,8 +102,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DailyTransportation-" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.clCar" />
         <item itemvalue="Python.demo" />
       </list>
@@ -205,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603889258964</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="classes update - adding class contacts and fix school">
+      <created>1603971328208</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1603971328208</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -226,7 +255,8 @@
     <MESSAGE value="class car" />
     <MESSAGE value="class car update" />
     <MESSAGE value="classes update" />
-    <option name="LAST_COMMIT_MESSAGE" value="classes update" />
+    <MESSAGE value="classes update - adding class contacts and fix school" />
+    <option name="LAST_COMMIT_MESSAGE" value="classes update - adding class contacts and fix school" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603621405516">
@@ -245,40 +275,56 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="540" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1603621400619" />
-    <state width="757" height="223" key="GridCell.Tab.0.bottom" timestamp="1603799418470">
+    <state width="757" height="277" key="GridCell.Tab.0.bottom" timestamp="1604231562893">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.bottom/0.0.1280.661@0.0.1280.661" timestamp="1603180641781" />
-    <state width="757" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603799418470" />
+    <state width="757" height="277" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604231562893" />
     <state width="757" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1603621407511" />
-    <state width="757" height="223" key="GridCell.Tab.0.center" timestamp="1603799418470">
+    <state width="757" height="277" key="GridCell.Tab.0.center" timestamp="1604231562892">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.center/0.0.1280.661@0.0.1280.661" timestamp="1603180641781" />
-    <state width="757" height="223" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603799418470" />
+    <state width="757" height="277" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604231562892" />
     <state width="757" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1603621407511" />
-    <state width="757" height="223" key="GridCell.Tab.0.left" timestamp="1603799418470">
+    <state width="757" height="277" key="GridCell.Tab.0.left" timestamp="1604231562892">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.left/0.0.1280.661@0.0.1280.661" timestamp="1603180641780" />
-    <state width="757" height="223" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603799418470" />
+    <state width="757" height="277" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604231562892" />
     <state width="757" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1603621407511" />
-    <state width="757" height="223" key="GridCell.Tab.0.right" timestamp="1603799418470">
+    <state width="757" height="277" key="GridCell.Tab.0.right" timestamp="1604231562892">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.right/0.0.1280.661@0.0.1280.661" timestamp="1603180641781" />
-    <state width="757" height="223" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603799418470" />
+    <state width="757" height="277" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604231562892" />
     <state width="757" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1603621407511" />
+    <state width="757" height="277" key="GridCell.Tab.1.bottom" timestamp="1604231562893">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="757" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604231562893" />
+    <state width="757" height="277" key="GridCell.Tab.1.center" timestamp="1604231562893">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="757" height="277" key="GridCell.Tab.1.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604231562893" />
+    <state width="757" height="277" key="GridCell.Tab.1.left" timestamp="1604231562893">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="757" height="277" key="GridCell.Tab.1.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604231562893" />
+    <state width="757" height="277" key="GridCell.Tab.1.right" timestamp="1604231562893">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="757" height="277" key="GridCell.Tab.1.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604231562893" />
     <state x="170" y="0" key="SettingsEditor" timestamp="1603621366676">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.661@0.0.1280.661" timestamp="1603180552608" />
     <state x="170" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603621366676" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1603889265562">
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1603971336950">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="233" y="64" key="Vcs.Push.Dialog.v2/0.0.1280.661@0.0.1280.661" timestamp="1603180570633" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603889265562" />
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603971336950" />
     <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603181276414">
       <screen x="0" y="0" width="1280" height="661" />
     </state>

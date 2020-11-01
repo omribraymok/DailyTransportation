@@ -7,6 +7,12 @@ class Human:
         self.address = address
         self.contacts = contacts
 
+    def __repr__(self):
+        return "('{}', '{}', '{}', '{}')".format(self.id, self.first_name, self.lest_name, self.address)
+
+    def __str__(self):
+        return "({}, {} {}: {})".format(self.id, self.first_name, self.lest_name, self.address)
+
 
 class Child(Human):
     num_of_children = 0
