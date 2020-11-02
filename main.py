@@ -15,12 +15,10 @@ def calculat(child_a, child_b, car, accompaniers):
     return cost, time
 
 
-
 car_1 = Car(122, 'car', 25, 7, 3, False, False)
-
 
 child_1 = Child("20396598", "Omri", "Braymok", "Gan-Nar,305", "0528401211", "003", "none")
 child_2 = Child("20369574", "Matan", "Asulin", "Nesher,485", "0521111111", "003", "none")
-accompanier_1 = Accompanier("203598746", "Hai", "Levi","Haifa, 54", "0568942536", "none", "none", "none")
+accompanier_1 = Accompanier("203598746", "Hai", "Levi", "Haifa, 54", "0568942536", "none", "none", "none")
 
 print(calculat(child_1, child_2, car_1, accompanier_1))
