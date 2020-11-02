@@ -1,17 +1,26 @@
 from clCar import Car
 from clHuman import Child
+from clHuman import Accompanier
 
-print(Car.num_of_cars)
 
-car_1 = Car(123, 'minibus', 25, 14, 5, True, True)
-car_2 = Car(122, 'car', 25, 7, 3, False, False)
+def calculat_time_a_to_b(stop_a, stop_b):
+    return 30
 
-print(car_1.calculate_cost(5))
-print(car_2.calculate_cost(5))
-print(Car.num_of_cars)
 
-print(car_1.wheelchair_option())
+def calculat(child_a, child_b, car, accompaniers):
+    time = calculat_time_a_to_b(child_a.address, accompaniers.address)
+    time += calculat_time_a_to_b(accompaniers.address, child_b.address)
+    time += calculat_time_a_to_b(accompaniers.address, child_b.address)
+    cost = car.driver_cost + (car.cost_per_minute * time)
+    return cost, time
 
-child_1 = Child("20396598", "omri", "braymok", "Gan-Nar,305", "0528401211", "003", "none")
 
-print(child_1)
+
+car_1 = Car(122, 'car', 25, 7, 3, False, False)
+
+
+child_1 = Child("20396598", "Omri", "Braymok", "Gan-Nar,305", "0528401211", "003", "none")
+child_2 = Child("20369574", "Matan", "Asulin", "Nesher,485", "0521111111", "003", "none")
+accompanier_1 = Accompanier("203598746", "Hai", "Levi","Haifa, 54", "0568942536", "none", "none", "none")
+
+print(calculat(child_1, child_2, car_1, accompanier_1))
