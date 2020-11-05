@@ -2,23 +2,41 @@ from clCar import Car
 from clHuman import Child
 from clHuman import Accompanier
 
+# Reading an excel file using Python
+import xlrd as xl
+
 
 def calculat_time_a_to_b(stop_a, stop_b):
     return 30
 
 
-def calculat(child_a, child_b, car, accompaniers):
-    time = calculat_time_a_to_b(child_a.address, accompaniers.address)
-    time += calculat_time_a_to_b(accompaniers.address, child_b.address)
-    time += calculat_time_a_to_b(accompaniers.address, child_b.address)
+def calculat(child_a, child_b, car, accompanier):
+    time = calculat_time_a_to_b(child_a.address, accompanier.address)
+    time += calculat_time_a_to_b(accompanier.address, child_b.address)
+    time += calculat_time_a_to_b(accompanier.address, child_b.address)
     cost = car.driver_cost + (car.cost_per_minute * time)
     return cost, time
 
 
-car_1 = Car(122, 'car', 25, 7, 3, False, False)
+# Give the location of the file
+loc = "Worksheet.xlsx"
 
-child_1 = Child("20396598", "Omri", "Braymok", "Gan-Nar,305", "0528401211", "003", "none")
-child_2 = Child("20369574", "Matan", "Asulin", "Nesher,485", "0521111111", "003", "none")
-accompanier_1 = Accompanier("203598746", "Hai", "Levi", "Haifa, 54", "0568942536", "none", "none", "none")
+# To open Workbook
+wb = xl.open_workbook(loc)
+childs = wb.sheet_by_index(0)
+accompaniers = wb.sheet_by_index(1)
+cars = wb.sheet_by_index(2)
+
+child_1 = Child(childs.cell_value(1, 0), childs.cell_value(1, 1), childs.cell_value(1, 2), childs.cell_value(1, 3),
+                childs.cell_value(1, 4), childs.cell_value(1, 5), childs.cell_value(1, 6))
+child_2 = Child(childs.cell_value(2, 0), childs.cell_value(2, 1), childs.cell_value(2, 2), childs.cell_value(1, 3),
+                childs.cell_value(2, 4), childs.cell_value(2, 5), childs.cell_value(2, 6))
+
+accompanier_1 = Accompanier(accompaniers.cell_value(1, 0), accompaniers.cell_value(1, 1), accompaniers.cell_value(1, 2),
+                            accompaniers.cell_value(1, 3), accompaniers.cell_value(1, 4), accompaniers.cell_value(1, 5),
+                            accompaniers.cell_value(1, 6), accompaniers.cell_value(1, 7))
+
+car_1 = Car(cars.cell_value(1, 0), cars.cell_value(1, 1), cars.cell_value(1, 2), cars.cell_value(1, 3),
+            cars.cell_value(1, 4), cars.cell_value(1, 5))
 
 print(calculat(child_1, child_2, car_1, accompanier_1))
