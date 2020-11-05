@@ -2,14 +2,13 @@ class Car:
 
     num_of_cars = 0
 
-    def __init__(self, ID, car_type, driver_cost, cost_per_minute, capacity, wheelchair, lift):
+    def __init__(self, ID, car_type, driver_cost, cost_per_minute, capacity, wheelchair):
         self.ID = ID
         self.car_type = car_type
         self.driver_cost = driver_cost
         self.cost_per_minute = cost_per_minute
         self.capacity = capacity
         self.wheelchair = wheelchair
-        self.lift = lift
 
         Car.num_of_cars += 1
 
