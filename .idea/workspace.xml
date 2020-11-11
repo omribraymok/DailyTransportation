@@ -19,14 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="omri's changes and classes" />
+    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="copy from master">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/omri" />
+    <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -48,7 +51,13 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../שנה 5-סמסטר ב/אבטחת מידע וקריפטולוגיה/פרויקט קורונה - קריפטו/PROJECT_GROUP_11" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\omri braymok\Desktop\לימודים\שנה 6-סמסטר א\פרויקט שלב ב'\DailyTransportation" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="clCar" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -123,6 +132,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -176,7 +186,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603182630961</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="temp before merging with the master">
+      <created>1604580872027</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604580872027</updated>
+    </task>
+    <task id="LOCAL-00008" summary="copy from master">
+      <created>1604581162801</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604581162801</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,42 +218,53 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
+    <MESSAGE value="temp before merging with the master" />
+    <MESSAGE value="copy from master" />
+    <option name="LAST_COMMIT_MESSAGE" value="copy from master" />
   </component>
   <component name="WindowStateProjectService">
     <state x="351" y="0" key="#demo" timestamp="1603179557447">
       <screen x="0" y="0" width="1280" height="661" />
     </state>
     <state x="351" y="0" key="#demo/0.0.1280.661@0.0.1280.661" timestamp="1603179557447" />
-    <state width="1169" height="223" key="GridCell.Tab.0.bottom" timestamp="1604326393084">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1604851466077">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604851466077" />
+    <state width="1160" height="305" key="GridCell.Tab.0.bottom" timestamp="1605089231272">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.bottom/0.0.1280.661@0.0.1280.661" timestamp="1603180641781" />
-    <state width="1169" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1604326393084" />
-    <state width="1169" height="223" key="GridCell.Tab.0.center" timestamp="1604326393083">
+    <state width="1165" height="294" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604584334948" />
+    <state width="1160" height="305" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605089231272" />
+    <state width="1160" height="305" key="GridCell.Tab.0.center" timestamp="1605089231272">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.center/0.0.1280.661@0.0.1280.661" timestamp="1603180641781" />
-    <state width="1169" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1604326393083" />
-    <state width="1169" height="223" key="GridCell.Tab.0.left" timestamp="1604326393083">
+    <state width="1165" height="294" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604584334947" />
+    <state width="1160" height="305" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1605089231272" />
+    <state width="1160" height="305" key="GridCell.Tab.0.left" timestamp="1605089231271">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.left/0.0.1280.661@0.0.1280.661" timestamp="1603180641780" />
-    <state width="1169" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1604326393083" />
-    <state width="1169" height="223" key="GridCell.Tab.0.right" timestamp="1604326393083">
+    <state width="1165" height="294" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604584334947" />
+    <state width="1160" height="305" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1605089231271" />
+    <state width="1160" height="305" key="GridCell.Tab.0.right" timestamp="1605089231272">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.right/0.0.1280.661@0.0.1280.661" timestamp="1603180641781" />
-    <state width="1169" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1604326393083" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1603180552608">
-      <screen x="0" y="0" width="1280" height="661" />
+    <state width="1165" height="294" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604584334947" />
+    <state width="1160" height="305" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1605089231272" />
+    <state x="170" y="0" key="SettingsEditor" timestamp="1605088722527">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.661@0.0.1280.661" timestamp="1603180552608" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1603182971286">
+    <state x="170" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1605088722527" />
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1604581171972">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="233" y="64" key="Vcs.Push.Dialog.v2/0.0.1280.661@0.0.1280.661" timestamp="1603180570633" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603182971286" />
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604581171972" />
     <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603181276414">
       <screen x="0" y="0" width="1280" height="661" />
     </state>
@@ -238,5 +273,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="459" y="221" key="git4idea.merge.GitPullDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603182752126" />
+    <state x="428" y="331" key="git4idea.ui.GitStashDialog" timestamp="1604580980881">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="428" y="331" key="git4idea.ui.GitStashDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604580980881" />
   </component>
 </project>
