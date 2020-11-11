@@ -1,3 +1,4 @@
+
 class Human:
 
     def __init__(self, ID, first_name, lest_name, address, contacts):

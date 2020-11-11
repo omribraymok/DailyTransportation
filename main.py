@@ -1,17 +1,42 @@
 from clCar import Car
 from clHuman import Child
+from clHuman import Accompanier
 
-print(Car.num_of_cars)
+# Reading an excel file using Python
+import xlrd as xl
 
-car_1 = Car(123, 'minibus', 25, 14, 5, True, True)
-car_2 = Car(122, 'car', 25, 7, 3, False, False)
 
-print(car_1.calculate_cost(5))
-print(car_2.calculate_cost(5))
-print(Car.num_of_cars)
+def calculat_time_a_to_b(stop_a, stop_b):
+    return 30
 
-print(car_1.wheelchair_option())
 
-child_1 = Child("20396598", "omri", "braymok", "Gan-Nar,305", "0528401211", "003", "none")
+def calculat(child_a, child_b, car, accompanier):
+    time = calculat_time_a_to_b(child_a.address, accompanier.address)
+    time += calculat_time_a_to_b(accompanier.address, child_b.address)
+    time += calculat_time_a_to_b(accompanier.address, child_b.address)
+    cost = car.driver_cost + (car.cost_per_minute * time)
+    return cost, time
 
-print(child_1)
+
+# Give the location of the file
+loc = "Worksheet.xlsx"
+
+# To open Workbook
+wb = xl.open_workbook(loc)
+childs = wb.sheet_by_index(0)
+accompaniers = wb.sheet_by_index(1)
+cars = wb.sheet_by_index(2)
+
+child_1 = Child(childs.cell_value(1, 0), childs.cell_value(1, 1), childs.cell_value(1, 2), childs.cell_value(1, 3),
+                childs.cell_value(1, 4), childs.cell_value(1, 5), childs.cell_value(1, 6))
+child_2 = Child(childs.cell_value(2, 0), childs.cell_value(2, 1), childs.cell_value(2, 2), childs.cell_value(1, 3),
+                childs.cell_value(2, 4), childs.cell_value(2, 5), childs.cell_value(2, 6))
+
+accompanier_1 = Accompanier(accompaniers.cell_value(1, 0), accompaniers.cell_value(1, 1), accompaniers.cell_value(1, 2),
+                            accompaniers.cell_value(1, 3), accompaniers.cell_value(1, 4), accompaniers.cell_value(1, 5),
+                            accompaniers.cell_value(1, 6), accompaniers.cell_value(1, 7))
+
+car_1 = Car(cars.cell_value(1, 0), cars.cell_value(1, 1), cars.cell_value(1, 2), cars.cell_value(1, 3),
+            cars.cell_value(1, 4), cars.cell_value(1, 5))
+
+print(calculat(child_1, child_2, car_1, accompanier_1))
