@@ -53,7 +53,6 @@ wb.save(loc)
 
 wb = xlr.open_workbook(loc)
 childs = wb.sheet_by_index(0)
-accompaniers = wb.sheet_by_index(1)
 cars = wb.sheet_by_index(2)
 
 child_1 = Child(childs.cell_value(1, 0), childs.cell_value(1, 1), childs.cell_value(1, 2), childs.cell_value(1, 3),

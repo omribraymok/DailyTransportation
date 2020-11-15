@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="write to xl file - in progress">
+    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="Initializes 20 random points to an Excel file&#10;Calculate the distance between two points.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Worksheet.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Worksheet.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clCar.py" beforeDir="false" afterPath="$PROJECT_DIR$/clCar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605100317242</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Initializes 20 random points to an Excel file&#10;Calculate the distance between two points.">
+      <created>1605454636897</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1605454636897</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,7 +257,8 @@
     <MESSAGE value="temp before merging with the master" />
     <MESSAGE value="copy from master" />
     <MESSAGE value="write to xl file - in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="write to xl file - in progress" />
+    <MESSAGE value="Initializes 20 random points to an Excel file&#10;Calculate the distance between two points." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initializes 20 random points to an Excel file&#10;Calculate the distance between two points." />
   </component>
   <component name="WindowStateProjectService">
     <state x="521" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605429532525">
@@ -267,62 +273,66 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604851466077" />
-    <state width="1155" height="305" key="GridCell.Tab.0.bottom" timestamp="1605454511468">
+    <state width="1154" height="305" key="GridCell.Tab.0.bottom" timestamp="1605459228155">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.bottom/0.0.1280.661@0.0.1280.661" timestamp="1603180641781" />
     <state width="1453" height="305" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1605169798991" />
     <state width="1156" height="305" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605445515561" />
-    <state width="1155" height="305" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605454511468" />
-    <state width="1155" height="305" key="GridCell.Tab.0.center" timestamp="1605454511468">
+    <state width="1154" height="305" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605459228155" />
+    <state width="1154" height="305" key="GridCell.Tab.0.center" timestamp="1605459228151">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.center/0.0.1280.661@0.0.1280.661" timestamp="1603180641781" />
     <state width="1453" height="305" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1605169798991" />
     <state width="1156" height="305" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605445515561" />
-    <state width="1155" height="305" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1605454511468" />
-    <state width="1155" height="305" key="GridCell.Tab.0.left" timestamp="1605454511468">
+    <state width="1154" height="305" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1605459228151" />
+    <state width="1154" height="305" key="GridCell.Tab.0.left" timestamp="1605459228151">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.left/0.0.1280.661@0.0.1280.661" timestamp="1603180641780" />
     <state width="1453" height="305" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1605169798990" />
     <state width="1156" height="305" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605445515561" />
-    <state width="1155" height="305" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1605454511468" />
-    <state width="1155" height="305" key="GridCell.Tab.0.right" timestamp="1605454511468">
+    <state width="1154" height="305" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1605459228151" />
+    <state width="1154" height="305" key="GridCell.Tab.0.right" timestamp="1605459228155">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.right/0.0.1280.661@0.0.1280.661" timestamp="1603180641781" />
     <state width="1453" height="305" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1605169798991" />
     <state width="1156" height="305" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605445515561" />
-    <state width="1155" height="305" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1605454511468" />
-    <state width="757" height="277" key="GridCell.Tab.1.bottom" timestamp="1605445349237">
+    <state width="1154" height="305" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1605459228155" />
+    <state width="757" height="277" key="GridCell.Tab.1.bottom" timestamp="1605459160726">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="757" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605445349237" />
-    <state width="757" height="277" key="GridCell.Tab.1.center" timestamp="1605445349237">
+    <state width="757" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605459160726" />
+    <state width="757" height="277" key="GridCell.Tab.1.center" timestamp="1605459160726">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="757" height="277" key="GridCell.Tab.1.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605445349237" />
-    <state width="757" height="277" key="GridCell.Tab.1.left" timestamp="1605445349237">
+    <state width="757" height="277" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1605459160726" />
+    <state width="757" height="277" key="GridCell.Tab.1.left" timestamp="1605459160726">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="757" height="277" key="GridCell.Tab.1.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605445349237" />
-    <state width="757" height="277" key="GridCell.Tab.1.right" timestamp="1605445349237">
+    <state width="757" height="277" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1605459160726" />
+    <state width="757" height="277" key="GridCell.Tab.1.right" timestamp="1605459160726">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="757" height="277" key="GridCell.Tab.1.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605445349237" />
+    <state width="757" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1605459160726" />
     <state x="170" y="0" key="SettingsEditor" timestamp="1605445121537">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.661@0.0.1280.661" timestamp="1603180552608" />
     <state x="170" y="0" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605445121537" />
     <state x="170" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1605088722527" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1605100329071">
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1605454648732">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="233" y="64" key="Vcs.Push.Dialog.v2/0.0.1280.661@0.0.1280.661" timestamp="1603180570633" />
     <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604581171972" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1605100329071" />
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1605454648732" />
     <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603181276414">
       <screen x="0" y="0" width="1280" height="661" />
     </state>
