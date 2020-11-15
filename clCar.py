@@ -12,6 +12,10 @@ class Car:
 
         Car.num_of_cars += 1
 
+    def __repr__(self):
+        return "('{}', '{}', '{}', '{}')".format(self.ID, self.car_type, self.driver_cost, self.cost_per_minute,
+                                                 self.capacity, self.wheelchair)
+
     def calculate_cost(self, minutes):
         return self.cost_per_minute * minutes + self.driver_cost
 
