@@ -1,5 +1,4 @@
 class Car:
-
     num_of_cars = 0
 
     def __init__(self, ID, car_type, driver_cost, cost_per_minute, capacity, wheelchair):
