@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="Adding comment and inserting children's data into a dictionary">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Worksheet.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Worksheet.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clSchool.py" beforeDir="false" afterPath="$PROJECT_DIR$/clSchool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="Adding comment and inserting children's data into a dictionary" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="omri" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -252,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605548647353</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="change to openpyxl and creating school obj">
+      <created>1605608542095</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605608542095</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -275,7 +277,8 @@
     <MESSAGE value="write to xl file - in progress" />
     <MESSAGE value="Initializes 20 random points to an Excel file&#10;Calculate the distance between two points." />
     <MESSAGE value="Adding comment and inserting children's data into a dictionary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding comment and inserting children's data into a dictionary" />
+    <MESSAGE value="change to openpyxl and creating school obj" />
+    <option name="LAST_COMMIT_MESSAGE" value="change to openpyxl and creating school obj" />
   </component>
   <component name="WindowStateProjectService">
     <state x="521" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605429532525">
@@ -344,11 +347,11 @@
     <state x="142" y="0" key="SettingsEditor/0.0.1280.661@0.0.1280.661" timestamp="1603180552608" />
     <state x="170" y="0" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605445121537" />
     <state x="170" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1605088722527" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1605603085871">
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1605608591049">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="233" y="64" key="Vcs.Push.Dialog.v2/0.0.1280.661@0.0.1280.661" timestamp="1603180570633" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605603085871" />
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605608591049" />
     <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1605459851122" />
     <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603181276414">
       <screen x="0" y="0" width="1280" height="661" />
