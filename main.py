@@ -23,7 +23,7 @@ def calculate_euclidean_dist(stop_a, stop_b):
 # Calculation of time and cost
 def calculate_time_cost(child_a, child_b, car):
     time_of_path = calculate_euclidean_dist(child_a.address, child_b.address)
-    cost_of_path = car.driver_cost + (car.cost_per_minute * time)
+    cost_of_path = car.driver_cost + (car.cost_per_minute * time_of_path)
     return cost_of_path, time_of_path
 
 
@@ -66,15 +66,15 @@ for x in range(2, 22):
     cell_obj6 = child_sheet.cell(row=x, column=6)
     cell_obj7 = child_sheet.cell(row=x, column=7)
     dict_of_all_children[x - 2] = Child(cell_obj1.value, cell_obj2.value, cell_obj3.value,
-                             cell_obj4.value, cell_obj5.value, cell_obj6.value,
-                             cell_obj7.value)
+                                        cell_obj4.value, cell_obj5.value, cell_obj6.value,
+                                        cell_obj7.value)
 for x in range(0, 20):
     print(dict_of_all_children[x])
 
 # Reading from excel file from Car table
 cars = excel_file.worksheets[2]
 dict_of_cars = {}
-#get cars data from data sheet
+# get cars data from data sheet
 for x in range(2, 5):
     cell_obj1 = cars.cell(row=x, column=1)
     cell_obj2 = cars.cell(row=x, column=2)
@@ -83,7 +83,7 @@ for x in range(2, 5):
     cell_obj5 = cars.cell(row=x, column=5)
     cell_obj6 = cars.cell(row=x, column=6)
     dict_of_cars[x - 2] = Car(cell_obj1.value, cell_obj2.value, cell_obj3.value,
-                         cell_obj4.value, cell_obj5.value, cell_obj6.value)
+                              cell_obj4.value, cell_obj5.value, cell_obj6.value)
 for x in range(0, 3):
     print(dict_of_cars[x])
 
@@ -97,7 +97,7 @@ for x in range(2, 3):
     cell_obj4 = schools.cell(row=x, column=4)
     cell_obj5 = schools.cell(row=x, column=5)
     dict_of_school[x - 2] = School(cell_obj1.value, cell_obj2.value, cell_obj3.value,
-                                cell_obj4.value, cell_obj5.value)
+                                   cell_obj4.value, cell_obj5.value)
 for x in range(0, 1):
     print(dict_of_school[x])
 
