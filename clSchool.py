@@ -7,4 +7,6 @@ class School:
         self.contacts = contacts
         self.v_time = v_time
 
-
+    def __repr__(self):
+        return "('{}', '{}', '{}', '{}', '{}')".format(self.id, self.name, self.address, self.contacts,
+                                                       self.v_time)
