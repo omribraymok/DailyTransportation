@@ -19,23 +19,33 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="Adding comment and inserting children's data into a dictionary">
+<<<<<<< HEAD
+    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="test commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Worksheet.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Worksheet.xlsx" afterDir="false" />
+=======
+    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="Add function to calculat time and cost">
+      <change afterPath="$PROJECT_DIR$/Worksheet.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clCar.py" beforeDir="false" afterPath="$PROJECT_DIR$/clCar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+>>>>>>> origin/master
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/master" />
-  </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="omri" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,7 +62,6 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../שנה 5-סמסטר ב/אבטחת מידע וקריפטולוגיה/פרויקט קורונה - קריפטו/PROJECT_GROUP_11" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -124,33 +133,12 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="numbers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DailyTransportation-" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/AppData/Local/Programs/Python/Python39/Lib/site-packages/openpyxl/compat" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/AppData/Local/Programs/Python/Python39/Lib/site-packages/openpyxl/compat/numbers.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.numbers" />
         <item itemvalue="Python.demo" />
         <item itemvalue="Python.clCar" />
+        <item itemvalue="Python.demo" />
         <item itemvalue="Python.demo" />
       </list>
     </recent_temporary>
@@ -209,49 +197,32 @@
       <option name="project" value="LOCAL" />
       <updated>1603182630961</updated>
     </task>
-    <task id="LOCAL-00007" summary="temp before merging with the master">
-      <created>1604580872027</created>
+<<<<<<< HEAD
+    <task id="LOCAL-00007" summary="new commit">
+      <created>1603185123514</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1604580872027</updated>
+      <updated>1603185123514</updated>
     </task>
-    <task id="LOCAL-00008" summary="copy from master">
-      <created>1604581162801</created>
+    <option name="localTasksCounter" value="8" />
+=======
+    <task id="LOCAL-00007" summary="Add function to calculat time and cost">
+      <created>1604326543049</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604326543049</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add function to calculat time and cost">
+      <created>1604326635715</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1604581162801</updated>
+      <updated>1604326635715</updated>
     </task>
-    <task id="LOCAL-00009" summary="write to xl file - in progress">
-      <created>1605100317242</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1605100317242</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Initializes 20 random points to an Excel file&#10;Calculate the distance between two points.">
-      <created>1605454636897</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1605454636897</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Initializes 20 random points to an Excel file&#10;Calculate the distance between two points.">
-      <created>1605459839844</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1605459839844</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Adding comment and inserting children's data into a dictionary">
-      <created>1605548647353</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1605548647353</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="9" />
+>>>>>>> origin/master
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -269,97 +240,113 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="test commit" />
-    <MESSAGE value="temp before merging with the master" />
-    <MESSAGE value="copy from master" />
-    <MESSAGE value="write to xl file - in progress" />
-    <MESSAGE value="Initializes 20 random points to an Excel file&#10;Calculate the distance between two points." />
-    <MESSAGE value="Adding comment and inserting children's data into a dictionary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding comment and inserting children's data into a dictionary" />
+<<<<<<< HEAD
+    <MESSAGE value="new commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="new commit" />
+=======
+    <MESSAGE value="Add function to calculat time and cost" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add function to calculat time and cost" />
+>>>>>>> origin/master
   </component>
   <component name="WindowStateProjectService">
-    <state x="521" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605429532525">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="-1506" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604573181733">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="521" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605429532525" />
+    <state x="-1506" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1604573181733" />
     <state x="351" y="0" key="#demo" timestamp="1603179557447">
       <screen x="0" y="0" width="1280" height="661" />
     </state>
     <state x="351" y="0" key="#demo/0.0.1280.661@0.0.1280.661" timestamp="1603179557447" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1604851466077">
+<<<<<<< HEAD
+    <state x="420" y="86" key="FileChooserDialogImpl" timestamp="1605083923342">
+      <screen x="0" y="0" width="1280" height="661" />
+    </state>
+    <state x="420" y="86" key="FileChooserDialogImpl/0.0.1280.661@0.0.1280.661" timestamp="1605083923342" />
+    <state width="1259" height="168" key="GridCell.Tab.0.bottom" timestamp="1603180641781">
+      <screen x="0" y="0" width="1280" height="661" />
+=======
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1604481963348">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604851466077" />
-    <state width="757" height="277" key="GridCell.Tab.0.bottom" timestamp="1605548666775">
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604481963348" />
+    <state width="1166" height="294" key="GridCell.Tab.0.bottom" timestamp="1604580419476">
       <screen x="0" y="0" width="1536" height="864" />
+>>>>>>> origin/master
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.bottom/0.0.1280.661@0.0.1280.661" timestamp="1603180641781" />
-    <state width="1453" height="305" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1605169798991" />
-    <state width="757" height="277" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605548666775" />
-    <state width="1152" height="152" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605542000122" />
-    <state width="757" height="277" key="GridCell.Tab.0.center" timestamp="1605548666774">
+    <state width="1462" height="294" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1604573444077" />
+    <state width="1166" height="294" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604580419476" />
+    <state width="1168" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1604326651002" />
+    <state width="1166" height="294" key="GridCell.Tab.0.center" timestamp="1604580419475">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.center/0.0.1280.661@0.0.1280.661" timestamp="1603180641781" />
-    <state width="1453" height="305" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1605169798991" />
-    <state width="757" height="277" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605548666774" />
-    <state width="1152" height="152" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1605542000122" />
-    <state width="757" height="277" key="GridCell.Tab.0.left" timestamp="1605548666774">
+    <state width="1462" height="294" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1604573444077" />
+    <state width="1166" height="294" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604580419475" />
+    <state width="1168" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1604326651002" />
+    <state width="1166" height="294" key="GridCell.Tab.0.left" timestamp="1604580419475">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.left/0.0.1280.661@0.0.1280.661" timestamp="1603180641780" />
-    <state width="1453" height="305" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1605169798990" />
-    <state width="757" height="277" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605548666774" />
-    <state width="1152" height="152" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1605542000122" />
-    <state width="757" height="277" key="GridCell.Tab.0.right" timestamp="1605548666774">
+    <state width="1462" height="294" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1604573444077" />
+    <state width="1166" height="294" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604580419475" />
+    <state width="1168" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1604326651002" />
+    <state width="1166" height="294" key="GridCell.Tab.0.right" timestamp="1604580419475">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1259" height="168" key="GridCell.Tab.0.right/0.0.1280.661@0.0.1280.661" timestamp="1603180641781" />
-    <state width="1453" height="305" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1605169798991" />
-    <state width="757" height="277" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605548666774" />
-    <state width="1152" height="152" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1605542000122" />
-    <state width="757" height="277" key="GridCell.Tab.1.bottom" timestamp="1605548666775">
-      <screen x="0" y="0" width="1536" height="864" />
+<<<<<<< HEAD
+    <state x="121" y="50" key="MergeDialog" timestamp="1603185265862">
+      <screen x="0" y="0" width="1280" height="661" />
     </state>
-    <state width="757" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605548666775" />
-    <state width="757" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605460689647" />
-    <state width="757" height="277" key="GridCell.Tab.1.center" timestamp="1605548666775">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="121" y="50" key="MergeDialog/0.0.1280.661@0.0.1280.661" timestamp="1603185265862" />
+    <state x="280" y="93" key="MultipleFileMergeDialog" timestamp="1603185265876">
+      <screen x="0" y="0" width="1280" height="661" />
     </state>
-    <state width="757" height="277" key="GridCell.Tab.1.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605548666775" />
-    <state width="757" height="277" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1605460689647" />
-    <state width="757" height="277" key="GridCell.Tab.1.left" timestamp="1605548666775">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="280" y="93" key="MultipleFileMergeDialog/0.0.1280.661@0.0.1280.661" timestamp="1603185265876" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1605083992926">
+      <screen x="0" y="0" width="1280" height="661" />
     </state>
-    <state width="757" height="277" key="GridCell.Tab.1.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605548666775" />
-    <state width="757" height="277" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1605460689647" />
-    <state width="757" height="277" key="GridCell.Tab.1.right" timestamp="1605548666775">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="757" height="277" key="GridCell.Tab.1.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605548666775" />
-    <state width="757" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1605460689647" />
-    <state x="170" y="0" key="SettingsEditor" timestamp="1605445121537">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.661@0.0.1280.661" timestamp="1605083992926" />
+    <state x="233" y="64" key="Vcs.Push.Dialog.v2" timestamp="1603185234560">
+=======
+    <state width="1462" height="294" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1604573444077" />
+    <state width="1166" height="294" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604580419475" />
+    <state width="1168" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1604326651002" />
+    <state x="170" y="0" key="SettingsEditor" timestamp="1604574113095">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.661@0.0.1280.661" timestamp="1603180552608" />
-    <state x="170" y="0" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605445121537" />
-    <state x="170" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1605088722527" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1605548655068">
+    <state x="-1707" y="0" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1604573213213" />
+    <state x="170" y="0" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604574113095" />
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1604326641881">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="233" y="64" key="Vcs.Push.Dialog.v2/0.0.1280.661@0.0.1280.661" timestamp="1603180570633" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605548655068" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1605459851122" />
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603182971286" />
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1604326641881" />
     <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603181276414">
+>>>>>>> origin/master
       <screen x="0" y="0" width="1280" height="661" />
     </state>
-    <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.661@0.0.1280.661" timestamp="1603181276414" />
+    <state x="233" y="64" key="Vcs.Push.Dialog.v2/0.0.1280.661@0.0.1280.661" timestamp="1603185234560" />
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603182971286" />
+    <state x="900" y="512" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604309590925">
+      <screen x="0" y="0" width="2560" height="1381" />
+    </state>
+    <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.661@0.0.1280.661" timestamp="1603185219307" />
+    <state x="900" y="512" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/3840.693.1280.661/0.0.2560.1381@0.0.2560.1381" timestamp="1604309590925" />
+    <state x="1063" y="404" key="git4idea.branch.GitSmartOperationDialog" timestamp="1604309318033">
+      <screen x="0" y="0" width="2560" height="1381" />
+    </state>
+    <state x="1063" y="404" key="git4idea.branch.GitSmartOperationDialog/3840.693.1280.661/0.0.2560.1381@0.0.2560.1381" timestamp="1604309318033" />
     <state x="459" y="221" key="git4idea.merge.GitPullDialog" timestamp="1603182752126">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="459" y="221" key="git4idea.merge.GitPullDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1603182752126" />
-    <state x="428" y="331" key="git4idea.ui.GitStashDialog" timestamp="1604580980881">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="1051" y="590" key="git4idea.ui.GitStashDialog" timestamp="1604309518618">
+      <screen x="0" y="0" width="2560" height="1381" />
     </state>
-    <state x="428" y="331" key="git4idea.ui.GitStashDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604580980881" />
+    <state x="1051" y="590" key="git4idea.ui.GitStashDialog/3840.693.1280.661/0.0.2560.1381@0.0.2560.1381" timestamp="1604309518618" />
   </component>
 </project>
