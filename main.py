@@ -28,6 +28,7 @@ def calculat(child_a, child_b, car):
     return cost, time
 
 
+# Using openpyxl to writing to excel file
 # Give the location of the file
 loc = "Worksheet.xlsx"
 
@@ -43,7 +44,7 @@ for i in range(20):
     (x, y) = random.randrange(-10, 10), random.randrange(-10, 10)
     ws[temp] = str(x) + ',' + str(y)
 
-# Increases thr  child table{
+# Increases the  child table{
 tmp = [ws.tables for ws in wb.worksheets]
 tables = [{v.name: v} for t in tmp for v in t.values()]
 
@@ -54,7 +55,7 @@ for table in tables:
 
 wb.save(loc)
 
-# Reading from excel file from child table anf insert to dictionary
+# Reading from excel file from child table anf insert to dictionary, using xlrd
 wb = xlr.open_workbook(loc)
 childs = wb.sheet_by_index(0)
 
@@ -63,8 +64,8 @@ for x in range(1, 21):
     child_dic[x - 1] = Child(childs.cell_value(x, 0), childs.cell_value(x, 1), childs.cell_value(x, 2),
                              childs.cell_value(x, 3), childs.cell_value(x, 4), childs.cell_value(x, 5),
                              childs.cell_value(x, 6))
-# for x in range(0, 20):
-#     print(child_dic[x])
+for x in range(0, 20):
+    print(child_dic[x])
 
 
 # Reading from excel file from Car table
