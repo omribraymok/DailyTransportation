@@ -4,6 +4,8 @@ from clSchool import School
 
 # Reading and Writing from/to excel file
 import openpyxl
+
+
 # Calculation of random points
 import random
 # Calculation of Euclidean distance
@@ -25,6 +27,22 @@ def calculate_time_cost(child_a, child_b, car):
     time_of_path = calculate_euclidean_dist(child_a.address, child_b.address)
     cost_of_path = car.driver_cost + (car.cost_per_minute * time_of_path)
     return cost_of_path, time_of_path
+
+
+def print_to_excel(dic):
+    # create workbook
+    wb = openpyxl.Workbook()
+    # get worksheet
+    ws = wb.active
+    i_global = 1
+    # change sheet name
+    ws.title = "Group" + str(i_global)
+    for t in range(1, len(dic) + 1):
+        # get a pointer for tab in table
+        tab = ws.cell(row=t, column=1)
+        # write in the tab
+        tab.value = dic[str(t)]
+    wb.save("Groups.xlsx")
 
 
 # Using openpyxl to writing to excel file
@@ -100,17 +118,9 @@ for x in range(2, 3):
                                    cell_obj4.value, cell_obj5.value)
 for x in range(0, 1):
     print(dict_of_school[x])
+#
+#
+# # print(calculat(child_dic[1], child_dic[2], car_1))
 
-# child_dic_a = {}
-# group_a = random.sample(list(child_dic), 7)
-# for i in group_a:
-#     child_dic_a = child_dic.pop(i)
-
-# print("group_a:")
-# for x in range(0, 6):
-#     print(child_dic_a[x])
-# print("group_b:")
-# for x in range(0, 12):
-#     print(child_dic[x])
-
-# print(calculat(child_dic[1], child_dic[2], car_1))
+temp_dic = {"1": 'Omri', "2": 'Matan', "3": 'Ron'}
+print_to_excel(temp_dic)
