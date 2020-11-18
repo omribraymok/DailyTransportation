@@ -6,7 +6,7 @@ from clSchool import School
 import openpyxl
 # Calculation of random points
 import random
-# Calculation of Euclidean distance;\\
+# Calculation of Euclidean distance
 import math
 
 
@@ -25,6 +25,22 @@ def calculate_time_cost(child_a, child_b, car):
     time_of_path = calculate_euclidean_dist(child_a.address, child_b.address)
     cost_of_path = car.driver_cost + (car.cost_per_minute * time_of_path)
     return cost_of_path, time_of_path
+
+
+def print_to_excel(dic):
+    # create workbook
+    wb = openpyxl.Workbook()
+    # get worksheet
+    ws = wb.active
+    i_global = 1
+    # change sheet name
+    ws.title = "Group" + str(i_global)
+    for t in range(1, len(dic) + 1):
+        # get a pointer for tab in table
+        tab = ws.cell(row=t, column=1)
+        # write in the tab
+        tab.value = dic[str(t)]
+    wb.save("Groups.xlsx")
 
 
 # Using openpyxl to writing to excel file
@@ -101,17 +117,7 @@ for x in range(2, 3):
 for x in range(0, 1):
     print(dict_of_school[x])
 
+# # print(calculat(child_dic[1], child_dic[2], car_1))
 
-# print(calculat(child_dic[1], child_dic[2], car_1))
-
-
-# this func will divide dictionary
-def div_groups(dict_of_all: dict, num_of_parts: int):
-    list_len: int = len(dict_of_all_children)
-    return [dict(list(dict_of_all.items())[i * list_len // num_of_parts:(i + 1) * list_len // num_of_parts])
-            for i in range(num_of_parts)]
-
-
-# print res
-for x in range(0, 20):
-    print((div_groups(dict_of_all_children, 3)[x]))
+temp_dic = {"1": 'Omri', "2": 'Matan', "3": 'Ron'}
+print_to_excel(temp_dic)
