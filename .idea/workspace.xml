@@ -26,9 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="print to excel">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="marge project: print to excel, div groups" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -284,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605694644503</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="marge project: print to excel, div groups">
+      <created>1605701201531</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1605701201531</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,7 +328,8 @@
     <MESSAGE value="refactor commit #2" />
     <MESSAGE value="refactor" />
     <MESSAGE value="print to excel" />
-    <option name="LAST_COMMIT_MESSAGE" value="print to excel" />
+    <MESSAGE value="marge project: print to excel, div groups" />
+    <option name="LAST_COMMIT_MESSAGE" value="marge project: print to excel, div groups" />
   </component>
   <component name="WindowStateProjectService">
     <state x="508" y="256" key="#Notifications" timestamp="1605695132421">
@@ -338,10 +344,10 @@
       <screen x="0" y="0" width="1280" height="661" />
     </state>
     <state x="351" y="0" key="#demo/0.0.1280.661@0.0.1280.661" timestamp="1603179557447" />
-    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1605701051942">
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1605701376320">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605701051942" />
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605701376320" />
     <state x="125" y="131" width="438" height="401" key="FileChooserDialogImpl" timestamp="1605610451728">
       <screen x="0" y="0" width="1280" height="661" />
     </state>
@@ -399,10 +405,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="147" y="69" key="MergeDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605694752850" />
-    <state x="407" y="194" key="MultipleFileMergeDialog" timestamp="1605694757934">
+    <state x="407" y="194" key="MultipleFileMergeDialog" timestamp="1605701357118">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="407" y="194" key="MultipleFileMergeDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605694757934" />
+    <state x="407" y="194" key="MultipleFileMergeDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605701357118" />
     <state x="170" y="0" key="SettingsEditor" timestamp="1605610778775">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -419,11 +425,11 @@
     <state x="233" y="64" key="Vcs.Push.Dialog.v2/0.0.1280.661@0.0.1280.661" timestamp="1603180570633" />
     <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605694650751" />
     <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1605459851122" />
-    <state x="540" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605700909399">
+    <state x="540" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605701376307">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.661@0.0.1280.661" timestamp="1603181276414" />
-    <state x="540" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605700909399" />
+    <state x="540" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605701376307" />
     <state x="459" y="221" key="git4idea.merge.GitPullDialog" timestamp="1603182752126">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
