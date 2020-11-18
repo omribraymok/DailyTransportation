@@ -4,8 +4,6 @@ from clSchool import School
 
 # Reading and Writing from/to excel file
 import openpyxl
-
-
 # Calculation of random points
 import random
 # Calculation of Euclidean distance
@@ -25,24 +23,8 @@ def calculate_euclidean_dist(stop_a, stop_b):
 # Calculation of time and cost
 def calculate_time_cost(child_a, child_b, car):
     time_of_path = calculate_euclidean_dist(child_a.address, child_b.address)
-    cost_of_path = car.driver_cost + (car.cost_per_minute * time_of_path)
+    cost_of_path = car.driver_cost + (car.cost_per_minute * time)
     return cost_of_path, time_of_path
-
-
-def print_to_excel(dic):
-    # create workbook
-    wb = openpyxl.Workbook()
-    # get worksheet
-    ws = wb.active
-    i_global = 1
-    # change sheet name
-    ws.title = "Group" + str(i_global)
-    for t in range(1, len(dic) + 1):
-        # get a pointer for tab in table
-        tab = ws.cell(row=t, column=1)
-        # write in the tab
-        tab.value = dic[str(t)]
-    wb.save("Groups.xlsx")
 
 
 # Using openpyxl to writing to excel file
@@ -84,15 +66,15 @@ for x in range(2, 22):
     cell_obj6 = child_sheet.cell(row=x, column=6)
     cell_obj7 = child_sheet.cell(row=x, column=7)
     dict_of_all_children[x - 2] = Child(cell_obj1.value, cell_obj2.value, cell_obj3.value,
-                                        cell_obj4.value, cell_obj5.value, cell_obj6.value,
-                                        cell_obj7.value)
+                             cell_obj4.value, cell_obj5.value, cell_obj6.value,
+                             cell_obj7.value)
 for x in range(0, 20):
     print(dict_of_all_children[x])
 
 # Reading from excel file from Car table
 cars = excel_file.worksheets[2]
 dict_of_cars = {}
-# get cars data from data sheet
+#get cars data from data sheet
 for x in range(2, 5):
     cell_obj1 = cars.cell(row=x, column=1)
     cell_obj2 = cars.cell(row=x, column=2)
@@ -101,7 +83,7 @@ for x in range(2, 5):
     cell_obj5 = cars.cell(row=x, column=5)
     cell_obj6 = cars.cell(row=x, column=6)
     dict_of_cars[x - 2] = Car(cell_obj1.value, cell_obj2.value, cell_obj3.value,
-                              cell_obj4.value, cell_obj5.value, cell_obj6.value)
+                         cell_obj4.value, cell_obj5.value, cell_obj6.value)
 for x in range(0, 3):
     print(dict_of_cars[x])
 
@@ -115,12 +97,20 @@ for x in range(2, 3):
     cell_obj4 = schools.cell(row=x, column=4)
     cell_obj5 = schools.cell(row=x, column=5)
     dict_of_school[x - 2] = School(cell_obj1.value, cell_obj2.value, cell_obj3.value,
-                                   cell_obj4.value, cell_obj5.value)
+                                cell_obj4.value, cell_obj5.value)
 for x in range(0, 1):
     print(dict_of_school[x])
-#
-#
-# # print(calculat(child_dic[1], child_dic[2], car_1))
 
-temp_dic = {"1": 'Omri', "2": 'Matan', "3": 'Ron'}
-print_to_excel(temp_dic)
+# child_dic_a = {}
+# group_a = random.sample(list(child_dic), 7)
+# for i in group_a:
+#     child_dic_a = child_dic.pop(i)
+
+# print("group_a:")
+# for x in range(0, 6):
+#     print(child_dic_a[x])
+# print("group_b:")
+# for x in range(0, 12):
+#     print(child_dic[x])
+
+# print(calculat(child_dic[1], child_dic[2], car_1))
