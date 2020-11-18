@@ -6,7 +6,7 @@ from clSchool import School
 import openpyxl
 # Calculation of random points
 import random
-# Calculation of Euclidean distance;\\
+# Calculation of Euclidean distance
 import math
 
 
@@ -25,6 +25,22 @@ def calculate_time_cost(child_a, child_b, car):
     time_of_path = calculate_euclidean_dist(child_a.address, child_b.address)
     cost_of_path = car.driver_cost + (car.cost_per_minute * time_of_path)
     return cost_of_path, time_of_path
+
+
+def print_to_excel(dic):
+    # create workbook
+    wb = openpyxl.Workbook()
+    # get worksheet
+    ws = wb.active
+    i_global = 1
+    # change sheet name
+    ws.title = "Group" + str(i_global)
+    for t in range(1, len(dic) + 1):
+        # get a pointer for tab in table
+        tab = ws.cell(row=t, column=1)
+        # write in the tab
+        tab.value = dic[str(t)]
+    wb.save("Groups.xlsx")
 
 
 # Using openpyxl to writing to excel file
