@@ -6,7 +6,7 @@ from clSchool import School
 import openpyxl
 # Calculation of random points
 import random
-# Calculation of Euclidean distance
+# Calculation of Euclidean distance;\\
 import math
 
 
@@ -66,15 +66,15 @@ for x in range(2, 22):
     cell_obj6 = child_sheet.cell(row=x, column=6)
     cell_obj7 = child_sheet.cell(row=x, column=7)
     dict_of_all_children[x - 2] = Child(cell_obj1.value, cell_obj2.value, cell_obj3.value,
-                             cell_obj4.value, cell_obj5.value, cell_obj6.value,
-                             cell_obj7.value)
+                                        cell_obj4.value, cell_obj5.value, cell_obj6.value,
+                                        cell_obj7.value)
 for x in range(0, 20):
     print(dict_of_all_children[x])
 
 # Reading from excel file from Car table
 cars = excel_file.worksheets[2]
 dict_of_cars = {}
-#get cars data from data sheet
+# get cars data from data sheet
 for x in range(2, 5):
     cell_obj1 = cars.cell(row=x, column=1)
     cell_obj2 = cars.cell(row=x, column=2)
@@ -83,7 +83,7 @@ for x in range(2, 5):
     cell_obj5 = cars.cell(row=x, column=5)
     cell_obj6 = cars.cell(row=x, column=6)
     dict_of_cars[x - 2] = Car(cell_obj1.value, cell_obj2.value, cell_obj3.value,
-                         cell_obj4.value, cell_obj5.value, cell_obj6.value)
+                              cell_obj4.value, cell_obj5.value, cell_obj6.value)
 for x in range(0, 3):
     print(dict_of_cars[x])
 
@@ -97,9 +97,10 @@ for x in range(2, 3):
     cell_obj4 = schools.cell(row=x, column=4)
     cell_obj5 = schools.cell(row=x, column=5)
     dict_of_school[x - 2] = School(cell_obj1.value, cell_obj2.value, cell_obj3.value,
-                                cell_obj4.value, cell_obj5.value)
+                                   cell_obj4.value, cell_obj5.value)
 for x in range(0, 1):
     print(dict_of_school[x])
+
 
 # child_dic_a = {}
 # group_a = random.sample(list(child_dic), 7)
@@ -114,3 +115,14 @@ for x in range(0, 1):
 #     print(child_dic[x])
 
 # print(calculat(child_dic[1], child_dic[2], car_1))
+
+
+# this func will divide dictionary
+def div_groups(dict_of_all: dict, num_of_parts: int):
+    list_len: int = len(dict_of_all_children)
+    return [dict(list(dict_of_all.items())[i * list_len // num_of_parts:(i + 1) * list_len // num_of_parts])
+            for i in range(num_of_parts)]
+
+# print res
+for x in range(0, 20):
+    print((div_groups(dict_of_all_children, 3)[x]))
