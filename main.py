@@ -114,3 +114,13 @@ for x in range(0, 1):
 #     print(child_dic[x])
 
 # print(calculat(child_dic[1], child_dic[2], car_1))
+
+# this func will divide dictionary
+def div_groups(dict_of_all: dict, num_of_parts: int):
+    list_len: int = len(dict_of_all_children)
+    return [dict(list(dict_of_all.items())[i * list_len // num_of_parts:(i + 1) * list_len // num_of_parts])
+            for i in range(num_of_parts)]
+
+# print res
+for x in range(0, 20):
+    print((div_groups(dict_of_all_children, 3)[x]))
