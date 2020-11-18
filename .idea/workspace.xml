@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="refactor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Worksheet.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Worksheet.xlsx" afterDir="false" />
+    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="print to excel">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -272,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605610907631</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="print to excel">
+      <created>1605694644503</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1605694644503</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -298,7 +303,8 @@
     <MESSAGE value="change to openpyxl and creating school obj" />
     <MESSAGE value="refactor commit #2" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="print to excel" />
+    <option name="LAST_COMMIT_MESSAGE" value="print to excel" />
   </component>
   <component name="WindowStateProjectService">
     <state x="521" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605691481449">
@@ -362,22 +368,31 @@
     </state>
     <state width="757" height="277" key="GridCell.Tab.1.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605548666775" />
     <state width="757" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1605460689647" />
+    <state x="147" y="69" key="MergeDialog" timestamp="1605694752850">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="147" y="69" key="MergeDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605694752850" />
+    <state x="407" y="194" key="MultipleFileMergeDialog" timestamp="1605694757934">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="407" y="194" key="MultipleFileMergeDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605694757934" />
     <state x="170" y="0" key="SettingsEditor" timestamp="1605610778775">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.661@0.0.1280.661" timestamp="1605610497973" />
     <state x="170" y="0" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605610778775" />
     <state x="170" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1605088722527" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1605610916388">
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1605694650751">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="233" y="64" key="Vcs.Push.Dialog.v2/0.0.1280.661@0.0.1280.661" timestamp="1603180570633" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605610916388" />
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605694650751" />
     <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1605459851122" />
-    <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603181276414">
-      <screen x="0" y="0" width="1280" height="661" />
+    <state x="540" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605694868579">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.661@0.0.1280.661" timestamp="1603181276414" />
+    <state x="540" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605694868579" />
     <state x="459" y="221" key="git4idea.merge.GitPullDialog" timestamp="1603182752126">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
