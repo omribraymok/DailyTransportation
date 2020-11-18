@@ -16,11 +16,18 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="print to excel">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +40,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Matan" />
+        <entry key="$PROJECT_DIR$" value="omri" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1j8IrB4TP0kTzU7LDkafkWErSxH" />
   <component name="ProjectLevelVcsManager">
@@ -145,8 +153,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.numbers" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.demo" />
         <item itemvalue="Python.clCar" />
         <item itemvalue="Python.numbers" />
@@ -285,7 +293,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -307,6 +327,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="print to excel" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="508" y="256" key="#Notifications" timestamp="1605695132421">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="508" y="256" key="#Notifications/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605695132421" />
     <state x="521" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605691481449">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -315,38 +339,42 @@
       <screen x="0" y="0" width="1280" height="661" />
     </state>
     <state x="351" y="0" key="#demo/0.0.1280.661@0.0.1280.661" timestamp="1603179557447" />
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1605695445299">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605695445299" />
     <state x="125" y="131" width="438" height="401" key="FileChooserDialogImpl" timestamp="1605610451728">
       <screen x="0" y="0" width="1280" height="661" />
     </state>
     <state x="125" y="131" width="438" height="401" key="FileChooserDialogImpl/0.0.1280.661@0.0.1280.661" timestamp="1605610451728" />
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604851466077" />
-    <state width="1146" height="239" key="GridCell.Tab.0.bottom" timestamp="1605692298684">
+    <state width="1145" height="239" key="GridCell.Tab.0.bottom" timestamp="1605695344686">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="629" height="157" key="GridCell.Tab.0.bottom/0.0.1280.661@0.0.1280.661" timestamp="1605610027503" />
     <state width="1453" height="305" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1605169798991" />
-    <state width="1146" height="239" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605692298684" />
+    <state width="1145" height="239" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605695344686" />
     <state width="1152" height="152" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605542000122" />
-    <state width="1146" height="239" key="GridCell.Tab.0.center" timestamp="1605692298684">
+    <state width="1145" height="239" key="GridCell.Tab.0.center" timestamp="1605695344686">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="629" height="157" key="GridCell.Tab.0.center/0.0.1280.661@0.0.1280.661" timestamp="1605610027502" />
     <state width="1453" height="305" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1605169798991" />
-    <state width="1146" height="239" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605692298684" />
+    <state width="1145" height="239" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605695344686" />
     <state width="1152" height="152" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1605542000122" />
-    <state width="1146" height="239" key="GridCell.Tab.0.left" timestamp="1605692298684">
+    <state width="1145" height="239" key="GridCell.Tab.0.left" timestamp="1605695344686">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="629" height="157" key="GridCell.Tab.0.left/0.0.1280.661@0.0.1280.661" timestamp="1605610027502" />
     <state width="1453" height="305" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1605169798990" />
-    <state width="1146" height="239" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605692298684" />
+    <state width="1145" height="239" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605695344686" />
     <state width="1152" height="152" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1605542000122" />
-    <state width="1146" height="239" key="GridCell.Tab.0.right" timestamp="1605692298684">
+    <state width="1145" height="239" key="GridCell.Tab.0.right" timestamp="1605695344686">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="629" height="157" key="GridCell.Tab.0.right/0.0.1280.661@0.0.1280.661" timestamp="1605610027503" />
     <state width="1453" height="305" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1605169798991" />
-    <state width="1146" height="239" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605692298684" />
+    <state width="1145" height="239" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605695344686" />
     <state width="1152" height="152" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1605542000122" />
     <state width="757" height="277" key="GridCell.Tab.1.bottom" timestamp="1605548666775">
       <screen x="0" y="0" width="1536" height="864" />
@@ -388,11 +416,11 @@
     <state x="233" y="64" key="Vcs.Push.Dialog.v2/0.0.1280.661@0.0.1280.661" timestamp="1603180570633" />
     <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605694650751" />
     <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1605459851122" />
-    <state x="540" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605694868579">
+    <state x="540" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605695323959">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.661@0.0.1280.661" timestamp="1603181276414" />
-    <state x="540" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605694868579" />
+    <state x="540" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605695323959" />
     <state x="459" y="221" key="git4idea.merge.GitPullDialog" timestamp="1603182752126">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
