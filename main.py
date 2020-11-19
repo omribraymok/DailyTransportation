@@ -21,26 +21,54 @@ def calculate_euclidean_dist(stop_a, stop_b):
 
 
 # Calculation of time and cost
-def calculate_time_cost(child_a, child_b, car):
+def calculate_cost_time(child_a, child_b, car):
     time_of_path = calculate_euclidean_dist(child_a.address, child_b.address)
     cost_of_path = car.driver_cost + (car.cost_per_minute * time_of_path)
     return cost_of_path, time_of_path
 
 
-def print_to_excel(dic):
+def print_to_excel(dic, car, cost, time):
+    # need to give every sheet a different name#################################################################################
     # create workbook
     wb = openpyxl.Workbook()
     # get worksheet
     ws = wb.active
-    i_global = 1
     # change sheet name
-    ws.title = "Group" + str(i_global)
-    for t in range(1, len(dic) + 1):
+    ws.title = "Group"
+    # for column use
+    r = 1
+    for t in dic:
+        if t == len(dic) - 1:
+            break
         # get a pointer for tab in table
-        tab = ws.cell(row=t, column=1)
+        tab = ws.cell(row=1, column=r)
+        r = r + 1
         # write in the tab
-        tab.value = dic[str(t)]
+        tab.value = str(dic[t])
+
+    tab = ws.cell(row=2, column=1)
+    # write in the tab
+    tab.value = car.ID
+    tab = ws.cell(row=3, column=1)
+    # write in the tab
+    tab.value = cost
+    tab = ws.cell(row=4, column=1)
+    # write in the tab
+    tab.value = time
     wb.save("Groups.xlsx")
+
+
+def calculate_time_cost_per_group(dic_of_children, car):
+    total_cost = 0
+    total_time = 0
+    for key in dic_of_children:
+        # to break when loop get to the obj before the lest one need to fix###############################################################
+        if key == len(dic_of_children) - 1 or key == 19:
+            break
+        (cost, time) = calculate_cost_time(dic_of_children[key], dic_of_children[key + 1], car)
+        total_cost += cost
+        total_time += time
+    print_to_excel(dic_of_children, car, total_cost, total_time)
 
 
 # Using openpyxl to writing to excel file
@@ -84,8 +112,6 @@ for x in range(2, 22):
     dict_of_all_children[x - 2] = Child(cell_obj1.value, cell_obj2.value, cell_obj3.value,
                                         cell_obj4.value, cell_obj5.value, cell_obj6.value,
                                         cell_obj7.value)
-for x in range(0, 20):
-    print(dict_of_all_children[x])
 
 # Reading from excel file from Car table
 cars = excel_file.worksheets[2]
@@ -100,8 +126,6 @@ for x in range(2, 5):
     cell_obj6 = cars.cell(row=x, column=6)
     dict_of_cars[x - 2] = Car(cell_obj1.value, cell_obj2.value, cell_obj3.value,
                               cell_obj4.value, cell_obj5.value, cell_obj6.value)
-for x in range(0, 3):
-    print(dict_of_cars[x])
 
 # Reading from excel file from School table
 schools = excel_file.worksheets[4]
@@ -114,11 +138,6 @@ for x in range(2, 3):
     cell_obj5 = schools.cell(row=x, column=5)
     dict_of_school[x - 2] = School(cell_obj1.value, cell_obj2.value, cell_obj3.value,
                                    cell_obj4.value, cell_obj5.value)
-for x in range(0, 1):
-    print(dict_of_school[x])
-
-
-# print(calculat(child_dic[1], child_dic[2], car_1))
 
 
 # this func will divide dictionary
@@ -129,5 +148,13 @@ def div_groups(dict_of_all: dict, num_of_parts: int):
 
 
 # print res
-for x in range(0, 20):
-    print((div_groups(dict_of_all_children, 3)[x]))
+for x in range(0, 3):
+    temp = div_groups(dict_of_all_children, 3)[x]
+    calculate_time_cost_per_group(temp, dict_of_cars[x])
+    # print(str(x))
+    # print(temp)
+
+# print(calculat(child_dic[1], child_dic[2], car_1))
+
+
+# calculate_time_cost_per_group(dict_of_all_children, dict_of_cars[0])
