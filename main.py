@@ -27,19 +27,19 @@ def calculate_cost_time(child_a, child_b, car):
     return cost_of_path, time_of_path
 
 
+file_number = 0
+
+
 def print_to_excel(dic, car, cost, time):
-    # need to give every sheet a different name#################################################################################
     # create workbook
     wb = openpyxl.Workbook()
     # get worksheet
     ws = wb.active
-    # change sheet name
-    ws.title = "Group"
+    # # change sheet name
+    # ws.title = "Group" + str(sheet_number)
     # for column use
     r = 1
     for t in dic:
-        if t == len(dic) - 1:
-            break
         # get a pointer for tab in table
         tab = ws.cell(row=1, column=r)
         r = r + 1
@@ -48,22 +48,22 @@ def print_to_excel(dic, car, cost, time):
 
     tab = ws.cell(row=2, column=1)
     # write in the tab
-    tab.value = car.ID
+    tab.value = "car id: " + str(car.ID)
     tab = ws.cell(row=3, column=1)
     # write in the tab
-    tab.value = cost
+    tab.value = "cost: " + str(cost)
     tab = ws.cell(row=4, column=1)
     # write in the tab
-    tab.value = time
-    wb.save("Groups.xlsx")
+    tab.value = "time: " + str(time)
+    wb.save("Groups" + str(file_number) + ".xlsx")
 
 
 def calculate_time_cost_per_group(dic_of_children, car):
     total_cost = 0
     total_time = 0
     for key in dic_of_children:
-        # to break when loop get to the obj before the lest one need to fix###############################################################
-        if key == len(dic_of_children) - 1 or key == 19:
+        # to break when loop get to the obj before the lest one
+        if key == ((len(dic_of_children) - 1) * (file_number + 1)):
             break
         (cost, time) = calculate_cost_time(dic_of_children[key], dic_of_children[key + 1], car)
         total_cost += cost
@@ -143,13 +143,14 @@ for x in range(2, 3):
 # this func will divide dictionary
 def div_groups(dict_of_all: dict, num_of_parts: int):
     list_len: int = len(dict_of_all_children)
-    return [dict(list(dict_of_all.items())[i * list_len // num_of_parts:(i + 1) * list_len // num_of_parts])
-            for i in range(num_of_parts)]
+    return [dict(list(dict_of_all.items())[k * list_len // num_of_parts:(k + 1) * list_len // num_of_parts])
+            for k in range(num_of_parts)]
 
 
 # print res
 for x in range(0, 3):
     temp = div_groups(dict_of_all_children, 3)[x]
+    file_number = x
     calculate_time_cost_per_group(temp, dict_of_cars[x])
     # print(str(x))
     # print(temp)
