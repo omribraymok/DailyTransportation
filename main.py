@@ -23,7 +23,7 @@ def calculate_euclidean_dist(stop_a, stop_b):
 # Calculation of time and cost
 def calculate_cost_time(child_a, child_b, car):
     time_of_path = calculate_euclidean_dist(child_a.address, child_b.address)
-    cost_of_path = car.driver_cost + (car.cost_per_minute * time_of_path)
+    cost_of_path = car.cost_per_minute * time_of_path
     return cost_of_path, time_of_path
 
 
@@ -59,7 +59,7 @@ def print_to_excel(dic, car, cost, time):
 
 
 def calculate_time_cost_per_group(dic_of_children, car):
-    total_cost = 0
+    total_cost = car.driver_cost
     total_time = 0
     for key in dic_of_children:
         # to break when loop get to the obj before the lest one
