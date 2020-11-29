@@ -28,10 +28,6 @@
   <component name="ChangeListManager">
     <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="fix bugs in &quot;print_to_excel&quot; and &quot;calculate_time_cost_per_group&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups0.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Groups0.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Groups1.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Groups2.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Worksheet.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Worksheet.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,6 +154,12 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.clCar" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.demo" />
+      <item itemvalue="Python.numbers" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
@@ -373,43 +375,43 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="598" height="466" key="DebuggerActiveHint/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605870465575" />
-    <state x="-1804" y="116" width="1688" height="848" key="DiffContextDialog" timestamp="1606208457601">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1606653845728">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="-1804" y="116" width="1688" height="848" key="DiffContextDialog/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606208457601" />
-    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605695445299" />
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1606653845728" />
     <state x="125" y="131" width="438" height="401" key="FileChooserDialogImpl" timestamp="1605610451728">
       <screen x="0" y="0" width="1280" height="661" />
     </state>
     <state x="125" y="131" width="438" height="401" key="FileChooserDialogImpl/0.0.1280.661@0.0.1280.661" timestamp="1605610451728" />
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604851466077" />
-    <state width="948" height="363" key="GridCell.Tab.0.bottom" timestamp="1606216356331">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state width="1107" height="287" key="GridCell.Tab.0.bottom" timestamp="1606653825388">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="629" height="157" key="GridCell.Tab.0.bottom/0.0.1280.661@0.0.1280.661" timestamp="1605610027503" />
     <state width="948" height="363" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606216356331" />
-    <state width="757" height="277" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1606146418679" />
+    <state width="1107" height="287" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1606653825388" />
     <state width="1124" height="283" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1606145509209" />
-    <state width="948" height="363" key="GridCell.Tab.0.center" timestamp="1606216356331">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state width="1107" height="287" key="GridCell.Tab.0.center" timestamp="1606653825387">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="629" height="157" key="GridCell.Tab.0.center/0.0.1280.661@0.0.1280.661" timestamp="1605610027502" />
     <state width="948" height="363" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606216356331" />
-    <state width="757" height="277" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1606146418679" />
+    <state width="1107" height="287" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1606653825387" />
     <state width="1124" height="283" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1606145509209" />
-    <state width="948" height="363" key="GridCell.Tab.0.left" timestamp="1606216356330">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state width="1107" height="287" key="GridCell.Tab.0.left" timestamp="1606653825387">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="629" height="157" key="GridCell.Tab.0.left/0.0.1280.661@0.0.1280.661" timestamp="1605610027502" />
     <state width="948" height="363" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606216356330" />
-    <state width="757" height="277" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1606146418679" />
+    <state width="1107" height="287" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1606653825387" />
     <state width="1124" height="283" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1606145509209" />
-    <state width="948" height="363" key="GridCell.Tab.0.right" timestamp="1606216356331">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state width="1107" height="287" key="GridCell.Tab.0.right" timestamp="1606653825387">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="629" height="157" key="GridCell.Tab.0.right/0.0.1280.661@0.0.1280.661" timestamp="1605610027503" />
     <state width="948" height="363" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606216356331" />
-    <state width="757" height="277" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1606146418679" />
+    <state width="1107" height="287" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1606653825387" />
     <state width="1124" height="283" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1606145509209" />
     <state width="948" height="363" key="GridCell.Tab.1.bottom" timestamp="1606216356332">
       <screen x="-1920" y="0" width="1920" height="1080" />
@@ -443,11 +445,11 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="407" y="194" key="MultipleFileMergeDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605694757934" />
-    <state x="170" y="0" key="SettingsEditor" timestamp="1605610778775">
+    <state x="170" y="0" key="SettingsEditor" timestamp="1606653845385">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.661@0.0.1280.661" timestamp="1605610497973" />
-    <state x="170" y="0" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1605610778775" />
+    <state x="170" y="0" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1606653845385" />
     <state x="170" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1605088722527" />
     <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1605871756846">
       <screen x="0" y="0" width="1536" height="864" />
@@ -460,6 +462,10 @@
     </state>
     <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.661@0.0.1280.661" timestamp="1603181276414" />
     <state x="540" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1606206898065" />
+    <state x="447" y="145" key="git4idea.branch.GitSmartOperationDialog" timestamp="1606653690414">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="447" y="145" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1606653690414" />
     <state x="459" y="221" key="git4idea.merge.GitPullDialog" timestamp="1603182752126">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
