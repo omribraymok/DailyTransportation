@@ -50,11 +50,11 @@ def find_time_travel_in_matrix(start_point, end_point):
     (x1, y1) = (int(x1), int(y1))
     (x2, y2) = end_point.split(',')
     (x2, y2) = (int(x2), int(y2))
-    y = point_list.index((x1, y1))
-    x = point_list.index((x2, y2))
+    number_in_a_row = point_list.index((x1, y1))
+    number_in_a_col = point_list.index((x2, y2))
     print("\ntime travel from " + start_point + " to " + end_point + ":")
-    print(x, y, time_matrix[x][y])
-    return time_matrix[x][y]
+    print(number_in_a_row, number_in_a_col, time_matrix[number_in_a_col][number_in_a_row])
+    return time_matrix[number_in_a_col][number_in_a_row]
 
 
 def calculate_cost_time(child_a, child_b, car):
