@@ -8,21 +8,57 @@ import openpyxl
 import random
 # Calculation of Euclidean distance
 import math
+import numpy as np
+
+
+# Function to print all the point and all the time to excel
+def print_matrix_to_excel(point_list_fun, time_matrix_fun):
+    # create workbook
+    wb = openpyxl.Workbook()
+    # get worksheet
+    ws = wb.active
+    # print the point on the first row and column
+    for x in range(2, 23):
+        # get a pointer for tab in table
+        tab = ws.cell(row=x, column=1)
+        # write in the tab
+        tab.value = str(point_list_fun[x - 2])
+        tab = ws.cell(row=1, column=x)
+        # write in the tab
+        tab.value = str(point_list_fun[x - 2])
+    # print the time travel matrix
+    for x in range(2, 23):
+        for y in range(2, 23):
+            # get a pointer for tab in table
+            tab = ws.cell(row=x, column=y)
+            # write in the tab
+            tab.value = str(time_matrix_fun[x - 2][y - 2])
+    wb.save("matrix.xlsx")
 
 
 # Calculation of Euclidean distance ("time travel")
-def calculate_euclidean_dist(stop_a, stop_b):
-    (x1, y1) = stop_a.split(',')
-    (x2, y2) = stop_b.split(',')
-    (x1, y1) = (int(x1), int(y1))
-    (x2, y2) = (int(x2), int(y2))
-    temp_var = (x1 - x2) ** 2 + (y1 - y2) ** 2
+def calculate_euclidean_dist(point_a, point_b):
+    (x_1, y_1) = point_a
+    (x_2, y_2) = point_b
+    temp_var = (x_1 - x_2) ** 2 + (y_1 - y_2) ** 2
     return math.sqrt(temp_var) * random.uniform(1, 1.5)
 
 
 # Calculation of time and cost
+def find_time_travel_in_matrix(start_point, end_point):
+    (x1, y1) = start_point.split(',')
+    (x1, y1) = (int(x1), int(y1))
+    (x2, y2) = end_point.split(',')
+    (x2, y2) = (int(x2), int(y2))
+    y = point_list.index((x1, y1))
+    x = point_list.index((x2, y2))
+    print("\ntime travel from " + start_point + " to " + end_point + ":")
+    print(x, y, time_matrix[x][y])
+    return time_matrix[x][y]
+
+
 def calculate_cost_time(child_a, child_b, car):
-    time_of_path = calculate_euclidean_dist(child_a.address, child_b.address)
+    time_of_path = find_time_travel_in_matrix(child_a.address, child_b.address)
     cost_of_path = car.cost_per_minute * time_of_path
     return cost_of_path, time_of_path
 
@@ -82,8 +118,8 @@ excel_file = openpyxl.load_workbook(data_file)
 child_sheet = excel_file.worksheets[0]
 
 # Enter a random point to address column in Child table
-for i in range(20):
-    temp = "D" + str(i + 2)
+for x in range(20):
+    temp = "D" + str(x + 2)
     (x, y) = random.randrange(-10, 10), random.randrange(-10, 10)
     child_sheet[temp] = str(x) + ',' + str(y)
 
@@ -139,6 +175,28 @@ for x in range(2, 3):
     dict_of_school[x - 2] = School(cell_obj1.value, cell_obj2.value, cell_obj3.value,
                                    cell_obj4.value, cell_obj5.value)
 
+# This list will contain the school address and all children address
+point_list = []
+# Enter the school's address to the matrix
+temp_point = dict_of_school[0].address
+(x1, y1) = temp_point.split(',')
+(x1, y1) = (int(x1), int(y1))
+point_list.insert(0, (x1, y1))
+# Enter the children's address to the list
+for x in range(0, 20):
+    temp_point = dict_of_all_children[x].address
+    (x1, y1) = temp_point.split(',')
+    (x1, y1) = (int(x1), int(y1))
+    point_list.insert(x, (x1, y1))
+# Matrix 21X21, this matrix will contain all the time travel from point A (row0) to point B (column0)
+time_matrix = np.zeros((21, 21))
+# Enter all the time travel
+for x in range(0, 21):
+    for y in range(0, 21):
+        time_matrix[x, y] = calculate_euclidean_dist(point_list[y], point_list[x])
+
+print_matrix_to_excel(point_list, time_matrix)
+
 
 # this func will divide dictionary
 def div_groups(dict_of_all: dict, num_of_parts: int):
@@ -152,10 +210,3 @@ for x in range(0, 3):
     temp = div_groups(dict_of_all_children, 3)[x]
     file_number = x
     calculate_time_cost_per_group(temp, dict_of_cars[x])
-    # print(str(x))
-    # print(temp)
-
-# print(calculat(child_dic[1], child_dic[2], car_1))
-
-
-# calculate_time_cost_per_group(dict_of_all_children, dict_of_cars[0])
