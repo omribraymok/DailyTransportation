@@ -44,7 +44,7 @@ def calculate_euclidean_dist(point_a, point_b):
     return math.sqrt(temp_var) * random.uniform(1, 1.5)
 
 
-# Calculation of time and cost
+# Finding the time travel from starting point to ending point in the time matrix
 def find_time_travel_in_matrix(start_point, end_point):
     (x1, y1) = start_point.split(',')
     (x1, y1) = (int(x1), int(y1))
@@ -52,13 +52,16 @@ def find_time_travel_in_matrix(start_point, end_point):
     (x2, y2) = (int(x2), int(y2))
     number_in_a_row = point_list.index((x1, y1))
     number_in_a_col = point_list.index((x2, y2))
+    ################################################
     print("\ntime travel from " + start_point + " to " + end_point + ":")
     print(number_in_a_row, number_in_a_col, time_matrix[number_in_a_col][number_in_a_row])
+    ################################################
     return time_matrix[number_in_a_col][number_in_a_row]
 
 
-def calculate_cost_time(child_a, child_b, car):
-    time_of_path = find_time_travel_in_matrix(child_a.address, child_b.address)
+# Calculation of time and cost
+def calculate_cost_time(address_1, address_2, car):
+    time_of_path = find_time_travel_in_matrix(address_1, address_2)
     cost_of_path = car.cost_per_minute * time_of_path
     return cost_of_path, time_of_path
 
@@ -94,16 +97,20 @@ def print_to_excel(dic, car, cost, time):
     wb.save("Groups" + str(file_number) + ".xlsx")
 
 
-def calculate_time_cost_per_group(dic_of_children, car):
+def calculate_time_cost_per_group(dic_of_children, car, school_address):
     total_cost = car.driver_cost
     total_time = 0
     for key in dic_of_children:
         # to break when loop get to the obj before the lest one
         if key == ((len(dic_of_children) - 1) * (file_number + 1)):
             break
-        (cost, time) = calculate_cost_time(dic_of_children[key], dic_of_children[key + 1], car)
+        (cost, time) = calculate_cost_time(dic_of_children[key].address, dic_of_children[key + 1].address, car)
         total_cost += cost
         total_time += time
+    # calculate the time and cost for school
+    (cost, time) = calculate_cost_time(dic_of_children[key].address, school_address, car)
+    total_cost += cost
+    total_time += time
     print_to_excel(dic_of_children, car, total_cost, total_time)
 
 
@@ -118,8 +125,8 @@ excel_file = openpyxl.load_workbook(data_file)
 child_sheet = excel_file.worksheets[0]
 
 # Enter a random point to address column in Child table
-for x in range(20):
-    temp = "D" + str(x + 2)
+for t in range(20):
+    temp = "D" + str(t + 2)
     (x, y) = random.randrange(-10, 10), random.randrange(-10, 10)
     child_sheet[temp] = str(x) + ',' + str(y)
 
@@ -129,7 +136,8 @@ tables_in_sheet = [{v.name: v} for t in tmp for v in t.values()]
 
 for table in tables_in_sheet:
     if list(table.keys())[0] == 'Child':
-        table['Child'].ref = 'A1:G21'
+        temp_str = 'A1:G' + str(t + 2)
+        table['Child'].ref = temp_str
 # }
 
 excel_file.save(data_file)
@@ -205,8 +213,7 @@ def div_groups(dict_of_all: dict, num_of_parts: int):
             for k in range(num_of_parts)]
 
 
-# print res
 for x in range(0, 3):
     temp = div_groups(dict_of_all_children, 3)[x]
     file_number = x
-    calculate_time_cost_per_group(temp, dict_of_cars[x])
+    calculate_time_cost_per_group(temp, dict_of_cars[x], dict_of_school[0].address)
