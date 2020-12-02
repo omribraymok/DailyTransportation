@@ -145,17 +145,8 @@ excel_file.save(data_file)
 dict_of_all_children = {}
 
 # get data from excel file
-for x in range(2, 22):
-    cell_obj1 = child_sheet.cell(row=x, column=1)
-    cell_obj2 = child_sheet.cell(row=x, column=2)
-    cell_obj3 = child_sheet.cell(row=x, column=3)
-    cell_obj4 = child_sheet.cell(row=x, column=4)
-    cell_obj5 = child_sheet.cell(row=x, column=5)
-    cell_obj6 = child_sheet.cell(row=x, column=6)
-    cell_obj7 = child_sheet.cell(row=x, column=7)
-    dict_of_all_children[x - 2] = Child(cell_obj1.value, cell_obj2.value, cell_obj3.value,
-                                        cell_obj4.value, cell_obj5.value, cell_obj6.value,
-                                        cell_obj7.value)
+for number_row in range(2, 22):
+    dict_of_all_children[x - 2] = Child(child_sheet, number_row)
 
 # Reading from excel file from Car table
 cars = excel_file.worksheets[2]
