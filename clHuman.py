@@ -1,5 +1,8 @@
-# Reading and Writing from/to excel file
-import openpyxl
+# Calculation of Euclidean distance
+import math
+import random
+
+
 class Human:
 
     def __init__(self, ID, first_name, lest_name, address, contacts):
@@ -26,16 +29,33 @@ class Child(Human):
 
         Child.num_of_children += 1
 
+    # child's constructor from excel
     def __init__(self, child_sheet, number_row):
-        self.id = child_sheet.cell(row=number_row, column=1)
-        self.first_name = child_sheet.cell(row=number_row, column=2)
-        self.lest_name = child_sheet.cell(row=number_row, column=3)
-        self.address = child_sheet.cell(row=number_row, column=4)
-        self.contacts = child_sheet.cell(row=number_row, column=5)
-        self.id_school = child_sheet.cell(row=number_row, column=6)
-        self.spacial_needs = child_sheet.cell(row=number_row, column=7)
+        cell_obj_id = child_sheet.cell(row=number_row, column=1)
+        cell_obj_first_name = child_sheet.cell(row=number_row, column=2)
+        cell_obj_lest_name = child_sheet.cell(row=number_row, column=3)
+        cell_obj_address = child_sheet.cell(row=number_row, column=4)
+        cell_obj_contacts = child_sheet.cell(row=number_row, column=5)
+        cell_obj_id_school = child_sheet.cell(row=number_row, column=6)
+        cell_obj_spacial_needs = child_sheet.cell(row=number_row, column=7)
+        self.id = cell_obj_id.value
+        self.first_name = cell_obj_first_name.value
+        self.lest_name = cell_obj_lest_name.value
+        self.address = cell_obj_address.value
+        self.contacts = cell_obj_contacts.value
+        self.id_school = cell_obj_id_school.value
+        self.spacial_needs = cell_obj_spacial_needs.value
 
         Child.num_of_children += 1
+
+    # Calculation of Euclidean distance ("time travel")
+    def calculate_euclidean_dist(self, point_b):
+        temp_point = self.address
+        (x_1, y_1) = temp_point.split(',')
+        (x_1, y_1) = (int(x_1), int(y_1))
+        (x_2, y_2) = point_b
+        temp_var = (x_1 - x_2) ** 2 + (y_1 - y_2) ** 2
+        return math.sqrt(temp_var) * random.uniform(1, 1.5)
 
 
 class Accompanier(Human):
