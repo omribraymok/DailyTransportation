@@ -10,6 +10,13 @@ import random
 import numpy as np
 
 
+# this func will divide dictionary
+def div_groups(dict_of_all: dict, num_of_parts: int):
+    list_len: int = len(dict_of_all_children)
+    return [dict(list(dict_of_all.items())[k * list_len // num_of_parts:(k + 1) * list_len // num_of_parts])
+            for k in range(num_of_parts)]
+
+
 # Enter a random point to address column in Child table
 def enter_random_point(number):
     for t in range(number):
@@ -159,14 +166,6 @@ for key in dict_of_all_children:
         time_matrix[number_row, key] = Child.calculate_euclidean_dist(dict_of_all_children[key], point_list[number_row])
 
 print_matrix_to_excel(point_list, time_matrix, dict_of_all_children)
-
-
-# this func will divide dictionary
-def div_groups(dict_of_all: dict, num_of_parts: int):
-    list_len: int = len(dict_of_all_children)
-    return [dict(list(dict_of_all.items())[k * list_len // num_of_parts:(k + 1) * list_len // num_of_parts])
-            for k in range(num_of_parts)]
-
 
 for number_row in range(0, 3):
     temp = div_groups(dict_of_all_children, 3)[number_row]

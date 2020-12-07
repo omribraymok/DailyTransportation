@@ -49,11 +49,11 @@ class Child(Human):
         Child.num_of_children += 1
 
     # Calculation of Euclidean distance ("time travel")
-    def calculate_euclidean_dist(self, point_b):
+    def calculate_euclidean_dist(self, destination):
         temp_point = self.address
         (x_1, y_1) = temp_point.split(',')
         (x_1, y_1) = (int(x_1), int(y_1))
-        (x_2, y_2) = point_b
+        (x_2, y_2) = destination
         temp_var = (x_1 - x_2) ** 2 + (y_1 - y_2) ** 2
         return math.sqrt(temp_var) * random.uniform(1, 1.5)
 
