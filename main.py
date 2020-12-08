@@ -1,6 +1,7 @@
 from clCar import Car
 from clHuman import Child
 from clSchool import School
+import global_variables as gv
 
 # Reading and Writing from/to excel file
 import openpyxl
@@ -12,7 +13,7 @@ import numpy as np
 
 # this func will divide dictionary
 def div_groups(dict_of_all: dict, num_of_parts: int):
-    list_len: int = len(dict_of_all_children)
+    list_len: int = len(gv.dict_of_all_children)
     return [dict(list(dict_of_all.items())[k * list_len // num_of_parts:(k + 1) * list_len // num_of_parts])
             for k in range(num_of_parts)]
 
@@ -35,7 +36,7 @@ def enter_random_point(number):
 
 
 # Function to print all the point and all the time to excel
-def print_matrix_to_excel(point_list_fun, time_matrix_fun, dict_of_all_children_fun):
+def print_matrix_to_excel():
     # create workbook
     wb = openpyxl.Workbook()
     # get worksheet
@@ -45,21 +46,21 @@ def print_matrix_to_excel(point_list_fun, time_matrix_fun, dict_of_all_children_
         # get a pointer for tab in table
         tab = ws.cell(row=x, column=1)
         # write in the tab
-        tab.value = str(point_list_fun[x - 2])
+        tab.value = str(gv.point_list[x - 2])
     # print the point on the first row column
     r = 2  # for column use
-    for k in dict_of_all_children_fun:
+    for k in gv.dict_of_all_children:
         tab = ws.cell(row=1, column=r)
         r = r + 1
         # write in the tab
-        tab.value = str(dict_of_all_children_fun[k])
+        tab.value = str(gv.dict_of_all_children[k])
     # print the time travel matrix
     for x in range(2, number_of_children + 3):
         for y in range(2, number_of_children + 2):
             # get a pointer for tab in table
             tab = ws.cell(row=x, column=y)
             # write in the tab
-            tab.value = str(time_matrix_fun[x - 2][y - 2])
+            tab.value = str(gv.time_matrix[x - 2][y - 2])
     wb.save("matrix.xlsx")
 
 
@@ -93,19 +94,18 @@ def print_to_excel_time_cost_per_group(dic, car, cost, time):
     wb.save("Groups" + str(file_number) + ".xlsx")
 
 
-def calculate_time_cost_per_group(dic_of_children, car, school_address, point_list, time_matrix):
+def calculate_time_cost_per_group(dic_of_children, car, school_address):
     total_cost = car.driver_cost
     total_time = 0
     for key in dic_of_children:
         # to break when loop get to the obj before the lest one
         if key == ((len(dic_of_children) - 1) * (file_number + 1)):
             break
-        (cost, time) = car.calculate_cost_time(dic_of_children[key].address, dic_of_children[key + 1].address,
-                                               point_list, time_matrix)
+        (cost, time) = car.calculate_cost_time(dic_of_children[key].address, dic_of_children[key + 1].address)
         total_cost += cost
         total_time += time
     # calculate the time and cost for school
-    (cost, time) = car.calculate_cost_time(dic_of_children[key].address, school_address, point_list, time_matrix)
+    (cost, time) = car.calculate_cost_time(dic_of_children[key].address, school_address)
     total_cost += cost
     total_time += time
     print_to_excel_time_cost_per_group(dic_of_children, car, total_cost, total_time)
@@ -126,11 +126,10 @@ enter_random_point(number_of_children)
 
 excel_file.save(data_file)
 
-dict_of_all_children = {}
 
 # get data from excel file
 for number_row in range(2, number_of_children + 2):
-    dict_of_all_children[number_row - 2] = Child(child_sheet, number_row)
+    gv.dict_of_all_children[number_row - 2] = Child(child_sheet, number_row)
 
 # Reading from excel file from Car table
 cars_sheet = excel_file.worksheets[2]
@@ -145,29 +144,28 @@ dict_of_school = {}
 for number_row in range(2, 3):
     dict_of_school[number_row - 2] = School(schools_sheet, number_row)
 
-# This list will contain the school address and all children address
-point_list = []
+
 # Enter the school's address to the matrix
 temp_point = dict_of_school[0].address
 (x1, y1) = temp_point.split(',')
 (x1, y1) = (int(x1), int(y1))
-point_list.insert(0, (x1, y1))
+gv.point_list.insert(0, (x1, y1))
 # Enter the children's address to the list
 for number_row in range(0, number_of_children):
-    temp_point = dict_of_all_children[number_row].address
+    temp_point = gv.dict_of_all_children[number_row].address
     (x1, y1) = temp_point.split(',')
     (x1, y1) = (int(x1), int(y1))
-    point_list.insert(number_row, (x1, y1))
+    gv.point_list.insert(number_row, (x1, y1))
 # Matrix 21X21, this matrix will contain all the time travel from point A (row0) to point B (column0)
-time_matrix = np.zeros((number_of_children + 1, number_of_children))
+gv.time_matrix = np.zeros((number_of_children + 1, number_of_children))
 # Enter all the time travel
-for key in dict_of_all_children:
+for key in gv.dict_of_all_children:
     for number_row in range(0, number_of_children + 1):
-        time_matrix[number_row, key] = Child.calculate_euclidean_dist(dict_of_all_children[key], point_list[number_row])
+        gv.time_matrix[number_row, key] = Child.calculate_euclidean_dist(gv.dict_of_all_children[key], gv.point_list[number_row])
 
-print_matrix_to_excel(point_list, time_matrix, dict_of_all_children)
+print_matrix_to_excel()
 
 for number_row in range(0, 3):
-    temp = div_groups(dict_of_all_children, 3)[number_row]
+    temp_dict = div_groups(gv.dict_of_all_children, 3)[number_row]
     file_number = number_row
-    calculate_time_cost_per_group(temp, dict_of_cars[number_row], dict_of_school[0].address, point_list, time_matrix)
+    calculate_time_cost_per_group(temp_dict, dict_of_cars[number_row], dict_of_school[0].address)

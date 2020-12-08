@@ -1,3 +1,6 @@
+import global_variables as gv
+
+
 class Car:
     num_of_cars = 0
 
@@ -39,22 +42,22 @@ class Car:
         return self.wheelchair
 
     # Calculation of time and cost
-    def calculate_cost_time(self, address_1, address_2, point_list, time_matrix):
-        time_of_path = find_time_travel_in_matrix(address_1, address_2, point_list, time_matrix)
+    def calculate_cost_time(self, address_1, address_2):
+        time_of_path = find_time_travel_in_matrix(address_1, address_2)
         cost_of_path = self.cost_per_minute * time_of_path
         return cost_of_path, time_of_path
 
 
 # Finding the time travel from starting point to ending point in the time matrix
-def find_time_travel_in_matrix(start_point, end_point, point_list, time_matrix):
+def find_time_travel_in_matrix(start_point, end_point):
     (x1, y1) = start_point.split(',')
     (x1, y1) = (int(x1), int(y1))
     (x2, y2) = end_point.split(',')
     (x2, y2) = (int(x2), int(y2))
-    number_in_a_row = point_list.index((x1, y1))
-    number_in_a_col = point_list.index((x2, y2))
+    number_in_a_row = gv.point_list.index((x1, y1))
+    number_in_a_col = gv.point_list.index((x2, y2))
     ################################################
     print("\ntime travel from " + start_point + " to " + end_point + ":")
-    print(number_in_a_row, number_in_a_col, time_matrix[number_in_a_col][number_in_a_row])
+    print(number_in_a_row, number_in_a_col, gv.time_matrix[number_in_a_col][number_in_a_row])
     ################################################
-    return time_matrix[number_in_a_col][number_in_a_row]
+    return gv.time_matrix[number_in_a_col][number_in_a_row]
