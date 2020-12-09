@@ -1,6 +1,10 @@
 time_matrix = None
 
-dict_of_all_children = {}
+list_of_all_children = []
+
+list_of_cars = []
+
+list_of_school = []
 
 # This list will contain the school address and all children address
 point_list = []

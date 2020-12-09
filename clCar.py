@@ -56,8 +56,8 @@ def find_time_travel_in_matrix(start_point, end_point):
     (x2, y2) = (int(x2), int(y2))
     number_in_a_row = gv.point_list.index((x1, y1))
     number_in_a_col = gv.point_list.index((x2, y2))
-    ################################################
-    print("\ntime travel from " + start_point + " to " + end_point + ":")
-    print(number_in_a_row, number_in_a_col, gv.time_matrix[number_in_a_col][number_in_a_row])
-    ################################################
+    # ################################################
+    # print("\ntime travel from " + start_point + " to " + end_point + ":")
+    # print(number_in_a_row, number_in_a_col, gv.time_matrix[number_in_a_col][number_in_a_row])
+    # ################################################
     return gv.time_matrix[number_in_a_col][number_in_a_row]
