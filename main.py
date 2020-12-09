@@ -51,7 +51,7 @@ def divide_chunks(l, n):
 
 
 # Enter a random point to address column in Child table
-def enter_random_point(number):
+def enter_random_point(number, data_file):
     for t in range(number):
         temp = "D" + str(t + 2)
         (number_row, y) = random.randrange(-10, 10), random.randrange(-10, 10)
@@ -65,6 +65,8 @@ def enter_random_point(number):
         if list(table.keys())[0] == 'Child':
             temp_str = 'A1:G' + str(t + 2)
             table['Child'].ref = temp_str
+
+    excel_file.save(data_file)
 
 
 # Function to print all the point and all the time to excel
@@ -143,7 +145,7 @@ def calculate_time_cost_per_group(list_of_children, car, school_address):
             total_cost_temp_perm += cost
             total_time_temp_perm += time
         # calculate the time and cost for school
-        (cost, time) = car.calculate_cost_time(temp_list_of_children[i].address, school_address)
+        (cost, time) = car.calculate_cost_time(temp_list_of_children[i + 1].address, school_address)
         total_cost_temp_perm += cost
         total_time_temp_perm += time
         if total_time_temp_perm < total_time or flag == 0:
@@ -151,29 +153,11 @@ def calculate_time_cost_per_group(list_of_children, car, school_address):
             short_path = temp_list_of_children
             total_time = total_time_temp_perm
             total_cost = total_cost_temp_perm
-            total_cost_temp_perm = car.driver_cost
-            total_time_temp_perm = 0
+        total_cost_temp_perm = car.driver_cost
+        total_time_temp_perm = 0
 
     print('group:' + str(file_number))
     print_to_excel_time_cost_per_group(short_path, car, total_cost, total_time)
-
-
-# def calculate_time_cost_per_group(list_of_children, car, school_address):
-#     total_cost = car.driver_cost
-#     total_time = 0
-#     length = len(list_of_children)
-#     for i in range(length):
-#         # to break when loop get to the obj before the lest one
-#         if i == (length - 1) * (file_number + 1):
-#             break
-#         (cost, time) = car.calculate_cost_time(list_of_children[i].address, list_of_children[i + 1].address)
-#         total_cost += cost
-#         total_time += time
-#     # calculate the time and cost for school
-#     (cost, time) = car.calculate_cost_time(list_of_children[i].address, school_address)
-#     total_cost += cost
-#     total_time += time
-#     print_to_excel_time_cost_per_group(list_of_children, car, total_cost, total_time)
 
 
 # Using openpyxl to writing to excel file
@@ -187,9 +171,8 @@ excel_file = openpyxl.load_workbook(data_file)
 child_sheet = excel_file.worksheets[0]
 
 number_of_children = 21
-enter_random_point(number_of_children)
 
-excel_file.save(data_file)
+enter_random_point(number_of_children, data_file)
 
 # get data from excel file
 for number_row in range(2, number_of_children + 2):
