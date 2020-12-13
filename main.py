@@ -1,14 +1,33 @@
 from clCar import Car
 from clHuman import Child
 from clSchool import School
+from k_means import k_means
 import global_variables as gv
-
 # Reading and Writing from/to excel file
 import openpyxl
 # Calculation of random points
 import random
-
 import numpy as np
+
+
+def divide_list_of_children_by_k_means(k):
+    out = []
+    divide_list_of_children = []
+    temp_list_of_children = []
+    for i in gv.point_list:
+        out.append(list(i))
+    out.remove([0, 0])
+    clusters = k_means(out, k)
+    for i in clusters:
+        for j in i:
+            (x1, y1) = j
+            index = gv.point_list.index((x1, y1))
+            temp = gv.list_of_all_children[index]
+            temp_list_of_children.append(temp)
+        new_list = temp_list_of_children.copy()
+        divide_list_of_children.append(new_list)
+        temp_list_of_children.clear()
+    return divide_list_of_children
 
 
 # Python function to get permutations of a given list
@@ -18,12 +37,12 @@ def permutation(lst):
     if len(lst) == 0:
         return []
 
-        # If there is only one element in lst then, only
-    # one permuatation is possible
+    # If there is only one element in lst then, only
+    # one permutation is possible
     if len(lst) == 1:
         return [lst]
 
-        # Find the permutations for lst if there are
+    # Find the permutations for lst if there are
     # more than 1 characters
 
     l = []  # empty list that will store current permutation
@@ -100,9 +119,8 @@ def print_matrix_to_excel():
     wb.save("matrix.xlsx")
 
 
-file_number = 0
-
-
+# Creates an excel file for each group
+# that contains the travel path, cost and travel time
 def print_to_excel_time_cost_per_group(lst, car, cost, time):
     # create workbook
     wb = openpyxl.Workbook()
@@ -128,15 +146,18 @@ def print_to_excel_time_cost_per_group(lst, car, cost, time):
     tab = ws.cell(row=4, column=1)
     # write in the tab
     tab.value = "time: " + str(time)
-    wb.save("Groups" + str(file_number) + ".xlsx")
+    wb.save("Groups" + str(gv.file_number) + ".xlsx")
 
 
+# For each group calculate the time and cost
+# The function checks all possible path and choosing the shortest path
 def calculate_time_cost_per_group(list_of_children, car, school_address):
     total_cost = car.driver_cost
     total_cost_temp_perm = car.driver_cost
     total_time = 0
     total_time_temp_perm = 0
     length = len(list_of_children)
+    short_path = []
     flag = 0
     for temp_list_of_children in permutation(list_of_children):
         for i in range(length - 1):
@@ -156,7 +177,7 @@ def calculate_time_cost_per_group(list_of_children, car, school_address):
         total_cost_temp_perm = car.driver_cost
         total_time_temp_perm = 0
 
-    print('group:' + str(file_number))
+    print('group:' + str(gv.file_number))
     print_to_excel_time_cost_per_group(short_path, car, total_cost, total_time)
 
 
@@ -216,9 +237,10 @@ for i in range(length):
 
 print_matrix_to_excel()
 
-divide_list_of_children = list(divide_chunks(gv.list_of_all_children, int(number_of_children / 3)))
+# divide_list_of_children = list(divide_chunks(gv.list_of_all_children, int(number_of_children / 3)))
+divide_list_of_children = divide_list_of_children_by_k_means(3)
 
 length = len(divide_list_of_children)
 for i in range(length):
-    file_number = i
+    gv.file_number = i
     calculate_time_cost_per_group(divide_list_of_children[i], gv.list_of_cars[i], gv.list_of_school[0].address)

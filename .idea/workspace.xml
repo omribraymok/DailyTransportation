@@ -26,14 +26,18 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="change from dictionary to list and on progress of choose the best path">
+    <list default="true" id="93215d1c-50eb-4304-b4d0-d5a43ae25370" name="Default Changelist" comment="finish choose the best path">
+      <change afterPath="$PROJECT_DIR$/k_means.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Groups0.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Groups0.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Groups1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Groups1.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Groups2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Groups2.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Worksheet.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Worksheet.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clCar.py" beforeDir="false" afterPath="$PROJECT_DIR$/clCar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global_variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/global_variables.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/matrix.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/matrix.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp_main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,19 +86,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="k_means" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DailyTransportation-" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\omri braymok\AppData\Local\Programs\Python\Python39\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/k_means.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -145,7 +149,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="numbers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="temp_k_means" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DailyTransportation-" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -153,11 +157,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/AppData/Local/Programs/Python/Python39/Lib/site-packages/openpyxl/compat" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/AppData/Local/Programs/Python/Python39/Lib/site-packages/openpyxl/compat/numbers.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp_k_means.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,18 +193,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.demo" />
-      <item itemvalue="Python.numbers" />
       <item itemvalue="Python.temp_main" />
       <item itemvalue="Python.list split" />
+      <item itemvalue="Python.k_means" />
+      <item itemvalue="Python.temp_k_means" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.k_means" />
+        <item itemvalue="Python.temp_k_means" />
         <item itemvalue="Python.temp_main" />
         <item itemvalue="Python.list split" />
-        <item itemvalue="Python.numbers" />
-        <item itemvalue="Python.demo" />
       </list>
     </recent_temporary>
   </component>
@@ -405,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607511385162</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="finish choose the best path">
+      <created>1607520224164</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1607520224164</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -453,7 +464,8 @@
     <MESSAGE value="moving calculate_cost_time to car class and refactor" />
     <MESSAGE value="Creating Global Variables" />
     <MESSAGE value="change from dictionary to list and on progress of choose the best path" />
-    <option name="LAST_COMMIT_MESSAGE" value="change from dictionary to list and on progress of choose the best path" />
+    <MESSAGE value="finish choose the best path" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish choose the best path" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="111" key="#Inspections" timestamp="1607330595858">
@@ -472,10 +484,10 @@
       <screen x="0" y="0" width="1280" height="661" />
     </state>
     <state x="351" y="0" key="#demo/0.0.1280.661@0.0.1280.661" timestamp="1603179557447" />
-    <state width="1143" height="466" key="DebuggerActiveHint" timestamp="1607506266807">
+    <state width="1143" height="466" key="DebuggerActiveHint" timestamp="1607855910176">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1143" height="466" key="DebuggerActiveHint/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607506266807" />
+    <state width="1143" height="466" key="DebuggerActiveHint/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607855910176" />
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1607359863122">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -486,57 +498,57 @@
     </state>
     <state x="125" y="131" width="438" height="401" key="FileChooserDialogImpl/0.0.1280.661@0.0.1280.661" timestamp="1605610451728" />
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604851466077" />
-    <state width="1515" height="192" key="GridCell.Tab.0.bottom" timestamp="1607519892086">
+    <state width="1515" height="192" key="GridCell.Tab.0.bottom" timestamp="1607856748107">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="629" height="157" key="GridCell.Tab.0.bottom/0.0.1280.661@0.0.1280.661" timestamp="1605610027503" />
     <state width="948" height="363" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606216356331" />
-    <state width="1515" height="192" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607519892086" />
+    <state width="1515" height="192" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607856748107" />
     <state width="1515" height="192" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1607518699068" />
-    <state width="1515" height="192" key="GridCell.Tab.0.center" timestamp="1607519892086">
+    <state width="1515" height="192" key="GridCell.Tab.0.center" timestamp="1607856748107">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="629" height="157" key="GridCell.Tab.0.center/0.0.1280.661@0.0.1280.661" timestamp="1605610027502" />
     <state width="948" height="363" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606216356331" />
-    <state width="1515" height="192" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607519892086" />
+    <state width="1515" height="192" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607856748107" />
     <state width="1515" height="192" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1607518699068" />
-    <state width="1515" height="192" key="GridCell.Tab.0.left" timestamp="1607519892086">
+    <state width="1515" height="192" key="GridCell.Tab.0.left" timestamp="1607856748107">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="629" height="157" key="GridCell.Tab.0.left/0.0.1280.661@0.0.1280.661" timestamp="1605610027502" />
     <state width="948" height="363" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606216356330" />
-    <state width="1515" height="192" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607519892086" />
+    <state width="1515" height="192" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607856748107" />
     <state width="1515" height="192" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1607518699067" />
-    <state width="1515" height="192" key="GridCell.Tab.0.right" timestamp="1607519892086">
+    <state width="1515" height="192" key="GridCell.Tab.0.right" timestamp="1607856748107">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="629" height="157" key="GridCell.Tab.0.right/0.0.1280.661@0.0.1280.661" timestamp="1605610027503" />
     <state width="948" height="363" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606216356331" />
-    <state width="1515" height="192" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607519892086" />
+    <state width="1515" height="192" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607856748107" />
     <state width="1515" height="192" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1607518699068" />
-    <state width="1515" height="231" key="GridCell.Tab.1.bottom" timestamp="1607519810254">
+    <state width="1515" height="231" key="GridCell.Tab.1.bottom" timestamp="1607856715167">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="948" height="363" key="GridCell.Tab.1.bottom/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606216356332" />
-    <state width="1515" height="231" key="GridCell.Tab.1.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607519810254" />
+    <state width="1515" height="231" key="GridCell.Tab.1.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607856715167" />
     <state width="756" height="231" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1607272372289" />
-    <state width="1515" height="231" key="GridCell.Tab.1.center" timestamp="1607519810254">
+    <state width="1515" height="231" key="GridCell.Tab.1.center" timestamp="1607856715167">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="948" height="363" key="GridCell.Tab.1.center/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606216356331" />
-    <state width="1515" height="231" key="GridCell.Tab.1.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607519810254" />
+    <state width="1515" height="231" key="GridCell.Tab.1.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607856715167" />
     <state width="756" height="231" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1607272372289" />
-    <state width="1515" height="231" key="GridCell.Tab.1.left" timestamp="1607519810254">
+    <state width="1515" height="231" key="GridCell.Tab.1.left" timestamp="1607856715167">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="948" height="363" key="GridCell.Tab.1.left/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606216356331" />
-    <state width="1515" height="231" key="GridCell.Tab.1.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607519810254" />
+    <state width="1515" height="231" key="GridCell.Tab.1.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607856715167" />
     <state width="756" height="231" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1607272372289" />
-    <state width="1515" height="231" key="GridCell.Tab.1.right" timestamp="1607519810254">
+    <state width="1515" height="231" key="GridCell.Tab.1.right" timestamp="1607856715167">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="948" height="363" key="GridCell.Tab.1.right/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606216356331" />
-    <state width="1515" height="231" key="GridCell.Tab.1.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607519810254" />
+    <state width="1515" height="231" key="GridCell.Tab.1.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607856715167" />
     <state width="756" height="231" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1607272372289" />
     <state x="147" y="69" key="MergeDialog" timestamp="1605694752850">
       <screen x="0" y="0" width="1536" height="864" />
@@ -552,17 +564,25 @@
     <state x="142" y="0" key="SettingsEditor/0.0.1280.661@0.0.1280.661" timestamp="1605610497973" />
     <state x="170" y="0" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1606653845385" />
     <state x="170" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1605088722527" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1607511390726">
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2" timestamp="1607520230910">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="233" y="64" key="Vcs.Push.Dialog.v2/0.0.1280.661@0.0.1280.661" timestamp="1603180570633" />
-    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607511390726" />
+    <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607520230910" />
     <state x="280" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1605459851122" />
+    <state width="775" height="439" key="XDebugger.FullValuePopup" timestamp="1607856711475">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="775" height="439" key="XDebugger.FullValuePopup/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607856711475" />
     <state x="540" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606206898065">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="450" y="245" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.661@0.0.1280.661" timestamp="1603181276414" />
     <state x="540" y="320" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1606206898065" />
+    <state x="-1674" y="92" width="1289" height="591" maximized="true" key="dock-window-1" timestamp="1607846733172">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1674" y="92" width="1289" height="591" maximized="true" key="dock-window-1/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1607846733172" />
     <state x="447" y="145" key="git4idea.branch.GitSmartOperationDialog" timestamp="1606653690414">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -584,14 +604,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/temp_main.py</url>
-          <line>32</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>162</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>141</line>
-          <option name="timeStamp" value="17" />
+          <line>154</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -604,8 +624,9 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="total_cost_temp_perm" />
-        <watch expression="total_time" />
+        <watch expression="gv.point_list" />
+        <watch expression="divide_list_of_children" />
+        <watch expression="gv.list_of_all_children" />
       </configuration>
     </watches-manager>
   </component>
