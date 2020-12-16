@@ -11,13 +11,13 @@ import numpy as np
 
 
 def divide_list_of_children_by_k_means(k):
-    out = []
+    children_coordinates = []
     divide_list_of_children = []
     temp_list_of_children = []
     for i in gv.point_list:
-        out.append(list(i))
-    out.remove([0, 0])
-    clusters = k_means(out, k)
+        children_coordinates.append(list(i))
+    children_coordinates.remove([0, 0])
+    clusters = k_means(children_coordinates, k)
     for i in clusters:
         for j in i:
             (x1, y1) = j
@@ -237,6 +237,7 @@ for i in range(length):
 
 print_matrix_to_excel()
 
+print(gv.point_list)
 # divide_list_of_children = list(divide_chunks(gv.list_of_all_children, int(number_of_children / 3)))
 divide_list_of_children = divide_list_of_children_by_k_means(3)
 
