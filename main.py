@@ -337,14 +337,13 @@ for number_row in range(0, number_of_children):
 gv.time_matrix = np.zeros((number_of_children + 1, number_of_children + 1))
 
 length = len(gv.list_of_all_children)
-# Enter all the time travel
-# gv.time_matrix=[i,j], i=idCh1, j=idCh2, i,j=0..n, n=school
-# for i in range(length):
-#    for number_row in range(0, number_of_children + 1):
-#        gv.time_matrix[number_row, i] = Child.calculate_euclidean_dist(gv.list_of_all_children[i],                                                                       gv.point_list[number_row])
+# Enter all the time travel gv.time_matrix=[i,j], i=idCh1, j=idCh2, i,j=0..n, n=school for i in range(length): for
+# number_row in range(0, number_of_children + 1): gv.time_matrix[number_row, i] = Child.calculate_euclidean_dist(
+# gv.list_of_all_children[i],                                                                       gv.point_list[
+# number_row])
 for i in range(length + 1):
     for j in range(length + 1):
-        gv.time_matrix[i, j] = calculate_euclidean_dist(gv.point_list[i], gv.point_list[j])
+        gv.time_matrix[i, j] = math.ceil(calculate_euclidean_dist(gv.point_list[i], gv.point_list[j]))
 print_matrix_to_excel()
 
 print(gv.point_list)
