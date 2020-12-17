@@ -7,7 +7,9 @@ import global_variables as gv
 import openpyxl
 # Calculation of random points
 import random
+import math
 import numpy as np
+import time
 
 
 def divide_list_of_children_by_k_means(k):
@@ -62,6 +64,12 @@ def permutation(lst):
     return l
 
 
+def test_permutatin():
+    lst = [1, 2, 3, 4]
+    allPerm = permutation(lst)
+    print(allPerm)
+
+
 # Break a list into chunks of size N
 def divide_chunks(l, n):
     # looping till length l
@@ -94,59 +102,133 @@ def print_matrix_to_excel():
     wb = openpyxl.Workbook()
     # get worksheet
     ws = wb.active
-    # print the point on the first row
-    for x in range(2, number_of_children + 3):
-        # get a pointer for tab in table
-        tab = ws.cell(row=x, column=1)
-        # write in the tab
-        tab.value = str(gv.point_list[x - 2])
 
-    # print the point on the first row column
-    r = 2  # for column use
+    tab = ws.cell(row=1, column=1)
+    tab.value = "i\j"
+    tab = ws.cell(row=2, column=1)
+    tab.value = "(x,y)"
+    nColAdd = 1
     length = len(gv.list_of_all_children)
-    for i in range(length):
-        tab = ws.cell(row=1, column=r)
-        r = r + 1
-        # write in the tab
-        tab.value = str(gv.list_of_all_children[i])
-    # print the time travel matrix
-    for x in range(2, number_of_children + 3):
-        for y in range(2, number_of_children + 2):
-            # get a pointer for tab in table
-            tab = ws.cell(row=x, column=y)
-            # write in the tab
-            tab.value = str(gv.time_matrix[x - 2][y - 2])
+    for j in range(length):
+        tab = ws.cell(row=1, column=j + 2 + nColAdd)
+        tab.value = str(j + 1)
+    tab = ws.cell(row=1, column=length + 2 + nColAdd)
+    tab.value = "school"
+    for i in range(length + 1):
+        tab = ws.cell(row=i + 2, column=1)
+        tab.value = str(i + 1)
+        tab = ws.cell(row=i + 2, column=2)
+        tab.value = str(gv.point_list[i])
+        for j in range(length + 1):
+            tab = ws.cell(row=i + 2, column=j + 2 + nColAdd)
+            tab.value = str(gv.time_matrix[i][j])
+
     wb.save("matrix.xlsx")
 
 
 # Creates an excel file for each group
 # that contains the travel path, cost and travel time
-def print_to_excel_time_cost_per_group(lst, car, cost, time):
+def print_to_excel_time_cost_per_group(lst, car, cost, time, spath="myPath", sschool="mySchool", timeOfStart=700):
     # create workbook
     wb = openpyxl.Workbook()
     # get worksheet
     ws = wb.active
     # # change sheet name
     # ws.title = "Group" + str(sheet_number)
-    r = 1  # for column use
-    length = len(lst)
-    for t in range(length):
-        # get a pointer for tab in table
-        tab = ws.cell(row=1, column=r)
-        r = r + 1
-        # write in the tab
-        tab.value = str(lst[t])
 
-    tab = ws.cell(row=2, column=1)
-    # write in the tab
-    tab.value = "car id: " + str(car.ID)
-    tab = ws.cell(row=3, column=1)
-    # write in the tab
-    tab.value = "cost: " + str(cost)
-    tab = ws.cell(row=4, column=1)
-    # write in the tab
-    tab.value = "time: " + str(time)
+    # list_of_all_children = []
+    # list_of_cars = []
+    # list_of_school = []
+
+    irow = 1
+    tab = ws.cell(row=irow, column=1)
+    tab.value = "path id"
+    tab = ws.cell(row=irow, column=2)
+    tab.value = spath
+    irow = irow + 1
+    tab = ws.cell(row=irow, column=1)
+    tab.value = "car.ID"
+    tab = ws.cell(row=irow, column=2)
+    tab.value = str(car.ID)
+    irow = irow + 1
+    tab = ws.cell(row=irow, column=1)
+    tab.value = "School"
+    tab = ws.cell(row=irow, column=2)
+    tab.value = sschool
+    irow = irow + 1
+    tab = ws.cell(row=irow, column=1)
+    tab.value = "nChildren"
+    tab = ws.cell(row=irow, column=2)
+    tab.value = str(len(lst))
+    irow = irow + 1
+    tab = ws.cell(row=irow, column=1)
+    tab.value = "timeOfStart"
+    tab = ws.cell(row=irow, column=2)
+    tab.value = str(timeOfStart)
+
+    currentTime = timeOfStart
+    for t in range(len(lst)):
+        # get a pointer for tab in table
+        if t > 0:
+            iInMatrix = lst[t - 1].id
+            jInMatrix = lst[t].id
+            print(str(iInMatrix) + "," + str(jInMatrix))
+            currentTime = currentTime + gv.time_matrix[iInMatrix][jInMatrix]
+        irow = irow + 1
+        tab = ws.cell(row=irow, column=1)
+        tab.value = str(t)
+        tab = ws.cell(row=irow, column=2)
+        # tab.value = str(lst[t])
+        tab.value = str(lst[t].id)
+        tab = ws.cell(row=irow, column=3)
+        tab.value = lst[t].first_name
+        tab = ws.cell(row=irow, column=4)
+        tab.value = lst[t].lest_name
+        tab = ws.cell(row=irow, column=5)
+        tab.value = lst[t].address
+        tab = ws.cell(row=irow, column=6)
+        tab.value = lst[t].contacts
+        tab = ws.cell(row=irow, column=7)
+        tab.value = str(currentTime)
+    iInMatrix = lst[len(lst) - 1].id
+    jInMatrix = len(gv.list_of_all_children)
+    print(str(iInMatrix) + "," + str(jInMatrix))
+    currentTime = currentTime + gv.time_matrix[iInMatrix][jInMatrix]
+    irow = irow + 1
+    tab = ws.cell(row=irow, column=1)
+    tab.value = "school"
+    tab = ws.cell(row=irow, column=2)
+    # tab.value = str(lst[t])
+    tab.value = str(gv.list_of_school[0].id)
+    tab = ws.cell(row=irow, column=3)
+    tab.value = gv.list_of_school[0].name
+    tab = ws.cell(row=irow, column=4)
+    tab.value = sschool
+    tab = ws.cell(row=irow, column=5)
+    # tab.value = gv.list_of_school[0].address
+    tab = ws.cell(row=irow, column=6)
+    tab.value = gv.list_of_school[0].contacts
+    tab = ws.cell(row=irow, column=7)
+    tab.value = str(currentTime)
+
+    irow = irow + 1
+    tab = ws.cell(row=irow, column=1)
+    tab.value = "cost"
+    tab = ws.cell(row=irow, column=2)
+    tab.value = str(cost)
+    irow = irow + 1
+    tab = ws.cell(row=irow, column=1)
+    tab.value = "time"
+    tab = ws.cell(row=irow, column=2)
+    tab.value = str(time)
     wb.save("Groups" + str(gv.file_number) + ".xlsx")
+
+
+def calculate_euclidean_dist(start, destination):
+    (x_1, y_1) = start
+    (x_2, y_2) = destination
+    temp_var = (x_1 - x_2) ** 2 + (y_1 - y_2) ** 2
+    return math.sqrt(temp_var) * random.uniform(1, 1.5)
 
 
 # For each group calculate the time and cost
@@ -158,28 +240,52 @@ def calculate_time_cost_per_group(list_of_children, car, school_address):
     total_time_temp_perm = 0
     length = len(list_of_children)
     short_path = []
+    timesBest = []
+    addressesBest = []
     flag = 0
     for temp_list_of_children in permutation(list_of_children):
+        times = []
+        addresses = []
+        addresses.append(temp_list_of_children[0].address)
         for i in range(length - 1):
             (cost, time) = car.calculate_cost_time(temp_list_of_children[i].address,
                                                    temp_list_of_children[i + 1].address)
             total_cost_temp_perm += cost
             total_time_temp_perm += time
+            times.append(time)
+            addresses.append(temp_list_of_children[i + 1].address)
         # calculate the time and cost for school
-        (cost, time) = car.calculate_cost_time(temp_list_of_children[i + 1].address, school_address)
-        total_cost_temp_perm += cost
+        (cost, time) = car.calculate_cost_time(temp_list_of_children[length - 1].address, school_address)
+        addresses.append(temp_list_of_children[length - 1].address)  # twice
+        addresses.append(school_address)
+        times.append(time)
+        cost = 0
+        if time > car.tMin:
+            cost = (time - car.tMin) * car.cost_per_minute
+        cost = car.driver_cost + cost
+        total_cost_temp_perm = cost  # += cost
         total_time_temp_perm += time
+
         if total_time_temp_perm < total_time or flag == 0:
             flag = 1
             short_path = temp_list_of_children
             total_time = total_time_temp_perm
             total_cost = total_cost_temp_perm
+            timesBest = times
+            addressesBest = addresses
         total_cost_temp_perm = car.driver_cost
         total_time_temp_perm = 0
 
     print('group:' + str(gv.file_number))
+    # print(str(timesBest))
+    # print(str(addressesBest))
     print_to_excel_time_cost_per_group(short_path, car, total_cost, total_time)
 
+
+# test_permutatin()
+
+# starting time
+start = time.time()
 
 # Using openpyxl to writing to excel file
 # Give the location of the file
@@ -197,7 +303,9 @@ enter_random_point(number_of_children, data_file)
 
 # get data from excel file
 for number_row in range(2, number_of_children + 2):
-    gv.list_of_all_children.insert((number_row - 2), (Child(child_sheet, number_row)))
+    ch = Child(child_sheet, number_row)
+    ch.id = number_row - 2
+    gv.list_of_all_children.insert((number_row - 2), (ch))
 
 # Reading from excel file from Car table
 cars_sheet = excel_file.worksheets[2]
@@ -225,16 +333,17 @@ for number_row in range(0, number_of_children):
     (x1, y1) = (int(x1), int(y1))
     gv.point_list.insert(number_row, (x1, y1))
 
-# Matrix 21X21, this matrix will contain all the time travel from point A (row0) to point B (column0)
-gv.time_matrix = np.zeros((number_of_children + 1, number_of_children))
+# Matrix 22X22, this matrix will contain all the time travel from point A (row0) to point B (column0)
+gv.time_matrix = np.zeros((number_of_children + 1, number_of_children + 1))
 
 length = len(gv.list_of_all_children)
-# Enter all the time travel
-for i in range(length):
-    for number_row in range(0, number_of_children + 1):
-        gv.time_matrix[number_row, i] = Child.calculate_euclidean_dist(gv.list_of_all_children[i],
-                                                                       gv.point_list[number_row])
-
+# Enter all the time travel gv.time_matrix=[i,j], i=idCh1, j=idCh2, i,j=0..n, n=school for i in range(length): for
+# number_row in range(0, number_of_children + 1): gv.time_matrix[number_row, i] = Child.calculate_euclidean_dist(
+# gv.list_of_all_children[i],                                                                       gv.point_list[
+# number_row])
+for i in range(length + 1):
+    for j in range(length + 1):
+        gv.time_matrix[i, j] = math.ceil(calculate_euclidean_dist(gv.point_list[i], gv.point_list[j]))
 print_matrix_to_excel()
 
 print(gv.point_list)
@@ -245,3 +354,9 @@ length = len(divide_list_of_children)
 for i in range(length):
     gv.file_number = i
     calculate_time_cost_per_group(divide_list_of_children[i], gv.list_of_cars[i], gv.list_of_school[0].address)
+
+# end time
+end = time.time()
+
+# total time taken
+print(f"Runtime of the program is {end - start}")
