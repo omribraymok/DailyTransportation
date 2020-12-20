@@ -10,6 +10,8 @@ import random
 import math
 import numpy as np
 import time
+import matplotlib.pyplot as plt
+import networkx as nx
 
 
 def divide_list_of_children_by_k_means(k):
@@ -62,12 +64,6 @@ def permutation(lst):
         for p in permutation(remLst):
             l.append([m] + p)
     return l
-
-
-def test_permutatin():
-    lst = [1, 2, 3, 4]
-    allPerm = permutation(lst)
-    print(allPerm)
 
 
 # Break a list into chunks of size N
@@ -172,7 +168,7 @@ def print_to_excel_time_cost_per_group(lst, car, cost, time, spath="myPath", ssc
         if t > 0:
             iInMatrix = lst[t - 1].id
             jInMatrix = lst[t].id
-            print(str(iInMatrix) + "," + str(jInMatrix))
+            # print(str(iInMatrix) + "," + str(jInMatrix))
             currentTime = currentTime + gv.time_matrix[iInMatrix][jInMatrix]
         irow = irow + 1
         tab = ws.cell(row=irow, column=1)
@@ -192,7 +188,7 @@ def print_to_excel_time_cost_per_group(lst, car, cost, time, spath="myPath", ssc
         tab.value = str(currentTime)
     iInMatrix = lst[len(lst) - 1].id
     jInMatrix = len(gv.list_of_all_children)
-    print(str(iInMatrix) + "," + str(jInMatrix))
+    # print(str(iInMatrix) + "," + str(jInMatrix))
     currentTime = currentTime + gv.time_matrix[iInMatrix][jInMatrix]
     irow = irow + 1
     tab = ws.cell(row=irow, column=1)
@@ -245,8 +241,7 @@ def calculate_time_cost_per_group(list_of_children, car, school_address):
     flag = 0
     for temp_list_of_children in permutation(list_of_children):
         times = []
-        addresses = []
-        addresses.append(temp_list_of_children[0].address)
+        addresses = [temp_list_of_children[0].address]
         for i in range(length - 1):
             (cost, time) = car.calculate_cost_time(temp_list_of_children[i].address,
                                                    temp_list_of_children[i + 1].address)
@@ -281,8 +276,24 @@ def calculate_time_cost_per_group(list_of_children, car, school_address):
     # print(str(addressesBest))
     print_to_excel_time_cost_per_group(short_path, car, total_cost, total_time)
 
+    list_of_address_in_short_path = []
+    for child in short_path:
+        (x, y) = child.address.split(',')
+        (x, y) = (int(x), int(y))
+        list_of_address_in_short_path.append((x, y))
 
-# test_permutatin()
+    G = nx.Graph()
+    length = len(list_of_address_in_short_path)
+    for i in range(length):
+        G.add_node(i, pos=list_of_address_in_short_path[i])
+    for i in range(length-1):
+        G.add_edge(i, i+1)
+    pos = nx.get_node_attributes(G, 'pos')
+    nx.draw(G, pos)
+    plt.savefig('G' + str(gv.file_number) + '.png')
+    # To delete all the nodes and edges
+    plt.clf()
+
 
 # starting time
 start = time.time()
@@ -346,9 +357,28 @@ for i in range(length + 1):
         gv.time_matrix[i, j] = math.ceil(calculate_euclidean_dist(gv.point_list[i], gv.point_list[j]))
 print_matrix_to_excel()
 
-print(gv.point_list)
+# print(gv.point_list)
 # divide_list_of_children = list(divide_chunks(gv.list_of_all_children, int(number_of_children / 3)))
 divide_list_of_children = divide_list_of_children_by_k_means(3)
+
+list_of_address_in_cluster = []
+list_of_cluster = []
+temp_list = []
+for cluster in divide_list_of_children:
+    for child in cluster:
+        (x, y) = child.address.split(',')
+        (x, y) = (int(x), int(y))
+        list_of_address_in_cluster.append((x, y))
+    temp_list = list_of_address_in_cluster.copy()
+    list_of_cluster.append(temp_list)
+    list_of_address_in_cluster.clear()
+
+plt.scatter(*zip(*list_of_cluster[0]), color='black')
+plt.scatter(*zip(*list_of_cluster[1]), color='blue')
+plt.scatter(*zip(*list_of_cluster[2]), color='red')
+
+plt.savefig('cluster.png')
+plt.clf()
 
 length = len(divide_list_of_children)
 for i in range(length):
