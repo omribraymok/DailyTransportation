@@ -53,9 +53,9 @@ class Car:
 # Finding the time travel from starting point to ending point in the time matrix
 def find_time_travel_in_matrix(start_point, end_point):
     (x1, y1) = start_point.split(',')
-    (x1, y1) = (int(x1), int(y1))
+    (x1, y1) = (float(x1), float(y1))
     (x2, y2) = end_point.split(',')
-    (x2, y2) = (int(x2), int(y2))
+    (x2, y2) = (float(x2), float(y2))
     number_in_a_row = gv.point_list.index((x1, y1))
     number_in_a_col = gv.point_list.index((x2, y2))
     return gv.time_matrix[number_in_a_row][number_in_a_col]
