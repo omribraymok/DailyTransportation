@@ -16,6 +16,4 @@ group_number = 0
 # Contain all the clusters k_means return
 clusters = []
 
-G0=nx.Graph()
-G1=nx.Graph()
-G2=nx.Graph()
+graphs_list = []

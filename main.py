@@ -291,12 +291,7 @@ def calculate_time_cost_per_group(list_of_children, car, school_address):
     nx.draw(G, pos)
     plt.savefig('G' + str(gv.group_number) + '.png')
     #Saving ths graph in global var
-    if gv.group_number == 0:
-        gv.G0 = G
-    if gv.group_number == 1:
-        gv.G1 = G
-    if gv.group_number == 2:
-        gv.G2 = G
+    gv.graphs_list.append(G)
     # To delete all the nodes and edges
     plt.clf()
 
@@ -322,7 +317,7 @@ enter_random_point(number_of_children, data_file)
 for number_row in range(2, number_of_children + 2):
     ch = Child(child_sheet, number_row)
     ch.id = number_row - 2
-    gv.list_of_all_children.insert((number_row - 2), (ch))
+    gv.list_of_all_children.insert((number_row - 2), ch)
 
 # Reading from excel file from Car table
 cars_sheet = excel_file.worksheets[2]
@@ -382,10 +377,11 @@ for i in range(length):
     calculate_time_cost_per_group(divide_list_of_children[i], gv.list_of_cars[i], gv.list_of_school[0].address)
 
 #Plot graph which contains all the graphs of all the path
-GT = nx.disjoint_union(gv.G0, gv.G1)
-GTT = nx.disjoint_union(GT, gv.G2)
-pos = nx.get_node_attributes(GTT, 'pos')
-nx.draw(GTT, pos)
+GT = nx.Graph()
+for i in range(len(gv.graphs_list)):
+    GT = nx.disjoint_union(GT, gv.graphs_list[i])
+pos = nx.get_node_attributes(GT, 'pos')
+nx.draw(GT, pos)
 plt.savefig('GT.png')
 # To delete all the nodes and edges
 plt.clf()
