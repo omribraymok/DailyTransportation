@@ -22,7 +22,7 @@ def divide_list_of_children_by_k_means(k):
     for i in gv.point_list:
         children_coordinates.append(list(i))
     children_coordinates.remove([0, 0])
-    gv.clusters = k_means(children_coordinates, k)
+    (gv.clusters, means) = k_means(children_coordinates, k)
     for i in gv.clusters:
         for j in i:
             (x1, y1) = j
@@ -32,7 +32,7 @@ def divide_list_of_children_by_k_means(k):
         new_list = temp_list_of_children.copy()
         divide_list_of_children.append(new_list)
         temp_list_of_children.clear()
-    return divide_list_of_children
+    return divide_list_of_children, means
 
 
 # Python function to get permutations of a given list
@@ -119,8 +119,8 @@ def print_matrix_to_excel():
 
 # Creates an excel file for each group
 # that contains the travel path, cost and travel time
-def print_to_excel_time_cost_per_group(lst, car, cost, time, spath="myPath", sschool="mySchool",
-                                       timeOfStart=timedelta(hours=7)):
+def print_to_excel_time_cost_per_group(lst, car, cost, time, time_for_each_children_on_short_path,
+                                       spath="myPath", sschool="mySchool", timeOfStart=timedelta(hours=7)):
     # create workbook
     wb = openpyxl.Workbook()
     # get worksheet
@@ -177,6 +177,8 @@ def print_to_excel_time_cost_per_group(lst, car, cost, time, spath="myPath", ssc
         tab.value = lst[t].contacts
         tab = ws.cell(row=irow, column=7)
         tab.value = str(currentTime)
+        tab = ws.cell(row=irow, column=8)
+        tab.value = str(time_for_each_children_on_short_path[t])
     iInMatrix = lst[len(lst) - 1].id
     jInMatrix = len(gv.list_of_all_children)
     temp_time = gv.time_matrix[iInMatrix][jInMatrix]
@@ -207,7 +209,7 @@ def print_to_excel_time_cost_per_group(lst, car, cost, time, spath="myPath", ssc
     tab.value = "time"
     tab = ws.cell(row=irow, column=2)
     tab.value = str(time)
-    wb.save("Groups" + str(gv.file_number) + ".xlsx")
+    wb.save("Groups" + str(gv.group_number) + ".xlsx")
 
 
 def calculate_euclidean_dist(start, destination):
@@ -226,6 +228,7 @@ def calculate_time_cost_per_group(list_of_children, car, school_address):
     total_time_temp_perm = 0
     length = len(list_of_children)
     short_path = []
+    time_for_each_children_on_short_path = []
     flag = 0
     for temp_list_of_children in permutation(list_of_children):
         times = []
@@ -254,19 +257,30 @@ def calculate_time_cost_per_group(list_of_children, car, school_address):
             short_path = temp_list_of_children
             total_time = total_time_temp_perm
             total_cost = total_cost_temp_perm
+            time_for_each_children_on_short_path = times.copy()
         total_cost_temp_perm = car.driver_cost
         total_time_temp_perm = 0
 
-    print('group:' + str(gv.file_number))
+    print('group:' + str(gv.group_number))
+    temp = 0
+    length = len(time_for_each_children_on_short_path)
+    for i in range(length-1, -1, -1):
+        temp += time_for_each_children_on_short_path[i]
+        time_for_each_children_on_short_path[i] = temp
+    print(time_for_each_children_on_short_path)
 
-    print_to_excel_time_cost_per_group(short_path, car, total_cost, total_time)
+    print_to_excel_time_cost_per_group(short_path, car, total_cost, total_time,time_for_each_children_on_short_path)
 
     list_of_address_in_short_path = []
     for child in short_path:
         (x, y) = child.address.split(',')
         (x, y) = (float(x), float(y))
         list_of_address_in_short_path.append((x, y))
+    (x, y) = school_address.split(',')
+    (x, y) = (float(x), float(y))
+    list_of_address_in_short_path.append((x, y))
 
+    #Output graph representing the travel path
     G = nx.Graph()
     length = len(list_of_address_in_short_path)
     for i in range(length):
@@ -275,7 +289,9 @@ def calculate_time_cost_per_group(list_of_children, car, school_address):
         G.add_edge(i, i + 1)
     pos = nx.get_node_attributes(G, 'pos')
     nx.draw(G, pos)
-    plt.savefig('G' + str(gv.file_number) + '.png')
+    plt.savefig('G' + str(gv.group_number) + '.png')
+    #Saving ths graph in global var
+    gv.graphs_list.append(G)
     # To delete all the nodes and edges
     plt.clf()
 
@@ -301,7 +317,7 @@ enter_random_point(number_of_children, data_file)
 for number_row in range(2, number_of_children + 2):
     ch = Child(child_sheet, number_row)
     ch.id = number_row - 2
-    gv.list_of_all_children.insert((number_row - 2), (ch))
+    gv.list_of_all_children.insert((number_row - 2), ch)
 
 # Reading from excel file from Car table
 cars_sheet = excel_file.worksheets[2]
@@ -320,7 +336,10 @@ for number_row in range(2, 3):
 temp_point = gv.list_of_school[0].address
 (x1, y1) = temp_point.split(',')
 (x1, y1) = (float(x1), float(y1))
+
 gv.point_list.insert(0, (x1, y1))
+#Add school address to cluster image
+plt.scatter(x1, y1, color='gray', s=150)
 
 # Enter the children's address to the list
 for number_row in range(0, number_of_children):
@@ -339,21 +358,33 @@ for i in range(length + 1):
         gv.time_matrix[i, j] = math.ceil(calculate_euclidean_dist(gv.point_list[i], gv.point_list[j]))
 print_matrix_to_excel()
 
-# print(gv.point_list)
+(divide_list_of_children, means) = divide_list_of_children_by_k_means(3)
 
-divide_list_of_children = divide_list_of_children_by_k_means(3)
-
-plt.scatter(*zip(*gv.clusters[0]), color='black')
+#Plot cluster image
+plt.scatter(*zip(*gv.clusters[0]), color='green')
 plt.scatter(*zip(*gv.clusters[1]), color='blue')
 plt.scatter(*zip(*gv.clusters[2]), color='red')
+#Add means to the image
+plt.scatter(*zip(*means), color='black', s=150)
 
 plt.savefig('cluster.png')
+# To delete all the nodes and edges
 plt.clf()
 
 length = len(divide_list_of_children)
 for i in range(length):
-    gv.file_number = i
+    gv.group_number = i
     calculate_time_cost_per_group(divide_list_of_children[i], gv.list_of_cars[i], gv.list_of_school[0].address)
+
+#Plot graph which contains all the graphs of all the path
+GT = nx.Graph()
+for i in range(len(gv.graphs_list)):
+    GT = nx.disjoint_union(GT, gv.graphs_list[i])
+pos = nx.get_node_attributes(GT, 'pos')
+nx.draw(GT, pos)
+plt.savefig('GT.png')
+# To delete all the nodes and edges
+plt.clf()
 
 # end time
 end = datetime.now()

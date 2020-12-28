@@ -145,5 +145,5 @@ def k_means(items, k):
     for i in range(length):
         print("clusters " + str(i) + ":")
         print(clusters[i])
-    return clusters
+    return clusters, means
 
