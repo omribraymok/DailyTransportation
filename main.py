@@ -361,9 +361,9 @@ print_matrix_to_excel()
 (divide_list_of_children, means) = divide_list_of_children_by_k_means(3)
 
 #Plot cluster image
-plt.scatter(*zip(*gv.clusters[0]), color='green')
-plt.scatter(*zip(*gv.clusters[1]), color='blue')
-plt.scatter(*zip(*gv.clusters[2]), color='red')
+plt.scatter(*zip(*gv.clusters[0]), color=gv.node_color[0])
+plt.scatter(*zip(*gv.clusters[1]), color=gv.node_color[1])
+plt.scatter(*zip(*gv.clusters[2]), color=gv.node_color[2])
 #Add means to the image
 plt.scatter(*zip(*means), color='black', s=150)
 
