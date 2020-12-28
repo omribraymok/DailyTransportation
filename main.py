@@ -9,7 +9,10 @@ import openpyxl
 import random
 import math
 import numpy as np
-import time
+# import time
+import matplotlib.pyplot as plt
+import networkx as nx
+from datetime import datetime, timedelta
 
 
 def divide_list_of_children_by_k_means(k):
@@ -19,8 +22,8 @@ def divide_list_of_children_by_k_means(k):
     for i in gv.point_list:
         children_coordinates.append(list(i))
     children_coordinates.remove([0, 0])
-    clusters = k_means(children_coordinates, k)
-    for i in clusters:
+    gv.clusters = k_means(children_coordinates, k)
+    for i in gv.clusters:
         for j in i:
             (x1, y1) = j
             index = gv.point_list.index((x1, y1))
@@ -64,24 +67,12 @@ def permutation(lst):
     return l
 
 
-def test_permutatin():
-    lst = [1, 2, 3, 4]
-    allPerm = permutation(lst)
-    print(allPerm)
-
-
-# Break a list into chunks of size N
-def divide_chunks(l, n):
-    # looping till length l
-    for i in range(0, len(l), n):
-        yield l[i:i + n]
-
-
 # Enter a random point to address column in Child table
 def enter_random_point(number, data_file):
     for t in range(number):
         temp = "D" + str(t + 2)
-        (number_row, y) = random.randrange(-10, 10), random.randrange(-10, 10)
+        (number_row, y) = random.uniform(-10, 10), random.uniform(-10, 10)
+        (number_row, y) = (round(number_row, 2), round(y, 2))
         child_sheet[temp] = str(number_row) + ',' + str(y)
 
     # Increases the  child table
@@ -128,17 +119,14 @@ def print_matrix_to_excel():
 
 # Creates an excel file for each group
 # that contains the travel path, cost and travel time
-def print_to_excel_time_cost_per_group(lst, car, cost, time, spath="myPath", sschool="mySchool", timeOfStart=700):
+def print_to_excel_time_cost_per_group(lst, car, cost, time, spath="myPath", sschool="mySchool",
+                                       timeOfStart=timedelta(hours=7)):
     # create workbook
     wb = openpyxl.Workbook()
     # get worksheet
     ws = wb.active
     # # change sheet name
     # ws.title = "Group" + str(sheet_number)
-
-    # list_of_all_children = []
-    # list_of_cars = []
-    # list_of_school = []
 
     irow = 1
     tab = ws.cell(row=irow, column=1)
@@ -172,13 +160,12 @@ def print_to_excel_time_cost_per_group(lst, car, cost, time, spath="myPath", ssc
         if t > 0:
             iInMatrix = lst[t - 1].id
             jInMatrix = lst[t].id
-            print(str(iInMatrix) + "," + str(jInMatrix))
-            currentTime = currentTime + gv.time_matrix[iInMatrix][jInMatrix]
+            temp_time = gv.time_matrix[iInMatrix][jInMatrix]
+            currentTime = currentTime + timedelta(minutes=temp_time)
         irow = irow + 1
         tab = ws.cell(row=irow, column=1)
         tab.value = str(t)
         tab = ws.cell(row=irow, column=2)
-        # tab.value = str(lst[t])
         tab.value = str(lst[t].id)
         tab = ws.cell(row=irow, column=3)
         tab.value = lst[t].first_name
@@ -192,20 +179,19 @@ def print_to_excel_time_cost_per_group(lst, car, cost, time, spath="myPath", ssc
         tab.value = str(currentTime)
     iInMatrix = lst[len(lst) - 1].id
     jInMatrix = len(gv.list_of_all_children)
-    print(str(iInMatrix) + "," + str(jInMatrix))
-    currentTime = currentTime + gv.time_matrix[iInMatrix][jInMatrix]
+    temp_time = gv.time_matrix[iInMatrix][jInMatrix]
+    currentTime = currentTime + timedelta(minutes=temp_time)
     irow = irow + 1
     tab = ws.cell(row=irow, column=1)
     tab.value = "school"
     tab = ws.cell(row=irow, column=2)
-    # tab.value = str(lst[t])
     tab.value = str(gv.list_of_school[0].id)
     tab = ws.cell(row=irow, column=3)
     tab.value = gv.list_of_school[0].name
     tab = ws.cell(row=irow, column=4)
     tab.value = sschool
     tab = ws.cell(row=irow, column=5)
-    # tab.value = gv.list_of_school[0].address
+    tab.value = gv.list_of_school[0].address
     tab = ws.cell(row=irow, column=6)
     tab.value = gv.list_of_school[0].contacts
     tab = ws.cell(row=irow, column=7)
@@ -240,13 +226,10 @@ def calculate_time_cost_per_group(list_of_children, car, school_address):
     total_time_temp_perm = 0
     length = len(list_of_children)
     short_path = []
-    timesBest = []
-    addressesBest = []
     flag = 0
     for temp_list_of_children in permutation(list_of_children):
         times = []
-        addresses = []
-        addresses.append(temp_list_of_children[0].address)
+        addresses = [temp_list_of_children[0].address]
         for i in range(length - 1):
             (cost, time) = car.calculate_cost_time(temp_list_of_children[i].address,
                                                    temp_list_of_children[i + 1].address)
@@ -271,21 +254,34 @@ def calculate_time_cost_per_group(list_of_children, car, school_address):
             short_path = temp_list_of_children
             total_time = total_time_temp_perm
             total_cost = total_cost_temp_perm
-            timesBest = times
-            addressesBest = addresses
         total_cost_temp_perm = car.driver_cost
         total_time_temp_perm = 0
 
     print('group:' + str(gv.file_number))
-    # print(str(timesBest))
-    # print(str(addressesBest))
+
     print_to_excel_time_cost_per_group(short_path, car, total_cost, total_time)
 
+    list_of_address_in_short_path = []
+    for child in short_path:
+        (x, y) = child.address.split(',')
+        (x, y) = (float(x), float(y))
+        list_of_address_in_short_path.append((x, y))
 
-# test_permutatin()
+    G = nx.Graph()
+    length = len(list_of_address_in_short_path)
+    for i in range(length):
+        G.add_node(i, pos=list_of_address_in_short_path[i])
+    for i in range(length - 1):
+        G.add_edge(i, i + 1)
+    pos = nx.get_node_attributes(G, 'pos')
+    nx.draw(G, pos)
+    plt.savefig('G' + str(gv.file_number) + '.png')
+    # To delete all the nodes and edges
+    plt.clf()
+
 
 # starting time
-start = time.time()
+start = datetime.now()
 
 # Using openpyxl to writing to excel file
 # Give the location of the file
@@ -323,32 +319,36 @@ for number_row in range(2, 3):
 # Enter the school's address to the matrix
 temp_point = gv.list_of_school[0].address
 (x1, y1) = temp_point.split(',')
-(x1, y1) = (int(x1), int(y1))
+(x1, y1) = (float(x1), float(y1))
 gv.point_list.insert(0, (x1, y1))
 
 # Enter the children's address to the list
 for number_row in range(0, number_of_children):
     temp_point = gv.list_of_all_children[number_row].address
     (x1, y1) = temp_point.split(',')
-    (x1, y1) = (int(x1), int(y1))
+    (x1, y1) = (float(x1), float(y1))
     gv.point_list.insert(number_row, (x1, y1))
 
 # Matrix 22X22, this matrix will contain all the time travel from point A (row0) to point B (column0)
 gv.time_matrix = np.zeros((number_of_children + 1, number_of_children + 1))
 
 length = len(gv.list_of_all_children)
-# Enter all the time travel gv.time_matrix=[i,j], i=idCh1, j=idCh2, i,j=0..n, n=school for i in range(length): for
-# number_row in range(0, number_of_children + 1): gv.time_matrix[number_row, i] = Child.calculate_euclidean_dist(
-# gv.list_of_all_children[i],                                                                       gv.point_list[
-# number_row])
+
 for i in range(length + 1):
     for j in range(length + 1):
         gv.time_matrix[i, j] = math.ceil(calculate_euclidean_dist(gv.point_list[i], gv.point_list[j]))
 print_matrix_to_excel()
 
-print(gv.point_list)
-# divide_list_of_children = list(divide_chunks(gv.list_of_all_children, int(number_of_children / 3)))
+# print(gv.point_list)
+
 divide_list_of_children = divide_list_of_children_by_k_means(3)
+
+plt.scatter(*zip(*gv.clusters[0]), color='black')
+plt.scatter(*zip(*gv.clusters[1]), color='blue')
+plt.scatter(*zip(*gv.clusters[2]), color='red')
+
+plt.savefig('cluster.png')
+plt.clf()
 
 length = len(divide_list_of_children)
 for i in range(length):
@@ -356,7 +356,7 @@ for i in range(length):
     calculate_time_cost_per_group(divide_list_of_children[i], gv.list_of_cars[i], gv.list_of_school[0].address)
 
 # end time
-end = time.time()
+end = datetime.now()
 
 # total time taken
 print(f"Runtime of the program is {end - start}")

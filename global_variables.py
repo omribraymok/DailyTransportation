@@ -10,3 +10,6 @@ list_of_school = []
 point_list = []
 
 file_number = 0
+
+# Contain all the clusters k_means return
+clusters = []
