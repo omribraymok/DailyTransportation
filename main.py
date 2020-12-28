@@ -339,7 +339,7 @@ temp_point = gv.list_of_school[0].address
 
 gv.point_list.insert(0, (x_1, y_1))
 #Add school address to cluster image
-plt.scatter(x_1, y_1, color='gray', s=150)
+plt.scatter(x_1, y_1, color='yellow', s=150)
 
 # Enter the children's address to the list
 for number_row in range(0, number_of_children):
