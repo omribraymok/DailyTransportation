@@ -288,7 +288,7 @@ def calculate_time_cost_per_group(list_of_children, car, school_address):
     for i in range(length - 1):
         G.add_edge(i, i + 1)
     pos = nx.get_node_attributes(G, 'pos')
-    nx.draw(G, pos)
+    nx.draw(G, pos, node_color=gv.node_color[gv.group_number], with_labels=True)
     plt.savefig('G' + str(gv.group_number) + '.png')
     #Saving ths graph in global var
     gv.graphs_list.append(G)
@@ -334,12 +334,13 @@ for number_row in range(2, 3):
 
 # Enter the school's address to the matrix
 temp_point = gv.list_of_school[0].address
-(x1, y1) = temp_point.split(',')
-(x1, y1) = (float(x1), float(y1))
+(x_1, y_1) = temp_point.split(',')
+(x_1, y_1) = (float(x_1), float(y_1))
 
-gv.point_list.insert(0, (x1, y1))
-#Add school address to cluster image
-plt.scatter(x1, y1, color='gray', s=150)
+gv.point_list.insert(0, (x_1, y_1))
+# START DRAWING CLUSTER IMAGE
+#Add school address to cluster image (point)
+plt.scatter(x_1, y_1, color='yellow', s=150)
 
 # Enter the children's address to the list
 for number_row in range(0, number_of_children):
@@ -361,10 +362,12 @@ print_matrix_to_excel()
 (divide_list_of_children, means) = divide_list_of_children_by_k_means(3)
 
 #Plot cluster image
-plt.scatter(*zip(*gv.clusters[0]), color='green')
-plt.scatter(*zip(*gv.clusters[1]), color='blue')
-plt.scatter(*zip(*gv.clusters[2]), color='red')
+# scatter each cluster's points on the plot
+plt.scatter(*zip(*gv.clusters[0]), color=gv.node_color[0])
+plt.scatter(*zip(*gv.clusters[1]), color=gv.node_color[1])
+plt.scatter(*zip(*gv.clusters[2]), color=gv.node_color[2])
 #Add means to the image
+# center points
 plt.scatter(*zip(*means), color='black', s=150)
 
 plt.savefig('cluster.png')
@@ -377,11 +380,13 @@ for i in range(length):
     calculate_time_cost_per_group(divide_list_of_children[i], gv.list_of_cars[i], gv.list_of_school[0].address)
 
 #Plot graph which contains all the graphs of all the path
-GT = nx.Graph()
 for i in range(len(gv.graphs_list)):
-    GT = nx.disjoint_union(GT, gv.graphs_list[i])
-pos = nx.get_node_attributes(GT, 'pos')
-nx.draw(GT, pos)
+    pos = nx.get_node_attributes(gv.graphs_list[i], 'pos')
+    nx.draw(gv.graphs_list[i], pos, node_color=gv.node_color[i], with_labels=True)
+G = nx.Graph()
+G.add_node(i, pos=(x_1, y_1))
+pos = nx.get_node_attributes(G, 'pos')
+nx.draw(G, pos, node_color="y", with_labels=True)
 plt.savefig('GT.png')
 # To delete all the nodes and edges
 plt.clf()

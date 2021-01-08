@@ -17,3 +17,5 @@ group_number = 0
 clusters = []
 
 graphs_list = []
+
+node_color = ["r", "b", "g"]
