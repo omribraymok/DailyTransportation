@@ -15,7 +15,7 @@ data_file = ".local/Worksheet.xlsx"
 k_count = 3
 
 data = algorithm.load_data(data_file)
-result = algorithm.calculate(*data, 3)
+result = algorithm.calculate(*data, k_count)
 
 fig, ax = plt.subplots()
 graphs.plot_group_scatter(result, ax)

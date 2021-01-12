@@ -16,7 +16,7 @@ def main():
         window.setFixedSize(RESOLUTION)
         window.start()
 
-        sys.exit(app.exec_())
+        app.exec_()
 
 
 if __name__ == '__main__':

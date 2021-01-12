@@ -33,9 +33,11 @@ def plot_combined_route(result: Result, graphs_list, ax):
 def plot_group_scatter(result: Result, ax):
     x_1, y_1 = result.school_point
     ax.scatter(x_1, y_1, color='yellow', s=150)
-    ax.scatter(*zip(*result.clusters[0]), color=NODE_COLORS[0])
-    ax.scatter(*zip(*result.clusters[1]), color=NODE_COLORS[1])
-    ax.scatter(*zip(*result.clusters[2]), color=NODE_COLORS[2])
+    for i in range(len(result.clusters)):
+        ax.scatter(*zip(*result.clusters[i]), color=NODE_COLORS[i])
+    # ax.scatter(*zip(*result.clusters[0]), color=NODE_COLORS[0])
+    # ax.scatter(*zip(*result.clusters[1]), color=NODE_COLORS[1])
+    # ax.scatter(*zip(*result.clusters[2]), color=NODE_COLORS[2])
     # Add means to the image
     # center points
     ax.scatter(*zip(*result.means), color='black', s=150)

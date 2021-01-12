@@ -7,7 +7,7 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
 from matplotlib.figure import Figure
 
 from algorithm import Result
-from consts import LOADING_SPINNER
+from consts import LOADING_SPINNER, ALL_ROUTES_CANVAS_PATH, GROUP_CANVAS_PATH, SINGLE_ROUTE_CANVAS_NAME, OUTPUT_PATH
 from graphs import plot_group_scatter, plot_combined_route, plot_group_route
 from ui import dialogs
 from ui.calculation import Params, CalcTracker
@@ -17,9 +17,9 @@ from ui.util import switch_layout
 class MplCanvas(FigureCanvasQTAgg):
 
     def __init__(self, parent=None, width=5, height=4, dpi=100):
-        fig = Figure(figsize=(width, height), dpi=dpi)
-        self.axes = fig.add_subplot(111)
-        super(MplCanvas, self).__init__(fig)
+        self.fig = Figure(figsize=(width, height), dpi=dpi)
+        self.axes = self.fig.add_subplot(111)
+        super(MplCanvas, self).__init__(self.fig)
 
 
 class CalculationWindow(QFrame):
@@ -76,10 +76,24 @@ class CalculationWindow(QFrame):
         graphs_list, canvases = self._plot_group_routes(result)
         all_canvas = self._plot_combined_route(result, graphs_list)
 
+        self._save_graphs(group_canvas, canvases, all_canvas)
+
         tabs = [('Groups', group_canvas), ('Routes', all_canvas)]
         for i, c in enumerate(canvases):
             tabs.append((f"Route {i}", c))
         self._show_graph_tabs(tabs)
+
+    def _save_graphs(self, group_canvas, route_canvases, all_canvas):
+        try:
+            if not OUTPUT_PATH.exists():
+                OUTPUT_PATH.mkdir()
+
+            for i, canvas in enumerate(route_canvases):
+                canvas.fig.savefig(str(OUTPUT_PATH / SINGLE_ROUTE_CANVAS_NAME.format(group_num=i)))
+            group_canvas.fig.savefig(str(GROUP_CANVAS_PATH))
+            all_canvas.fig.savefig(str(ALL_ROUTES_CANVAS_PATH))
+        except Exception as e:
+            dialogs.show_error_dialog(self, e)
 
     def _error_calculation(self, exception: Exception):
         self._loading_movie.stop()

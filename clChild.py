@@ -1,29 +1,13 @@
-# Calculation of Euclidean distance
-import math
-import random
 
+class Child:
+    num_of_children = 0
 
-class Human:
-
-    def __init__(self, ID, first_name, lest_name, address, contacts):
+    def __init__(self, ID, first_name, lest_name, address, contacts, id_school, special_needs):
         self.id = ID
         self.first_name = first_name
         self.lest_name = lest_name
         self.address = address
         self.contacts = contacts
-
-    def __repr__(self):
-        return "('{}', '{}', '{}', '{}')".format(self.id, self.first_name, self.lest_name, self.address)
-
-    def __str__(self):
-        return "({}, {} {}: {})".format(self.id, self.first_name, self.lest_name, self.address)
-
-
-class Child(Human):
-    num_of_children = 0
-
-    def __init__(self, ID, first_name, lest_name, address, contacts, id_school, special_needs):
-        super().__init__(ID, first_name, lest_name, address, contacts)
         self.id_school = id_school
         self.spacial_needs = special_needs
 
@@ -48,14 +32,8 @@ class Child(Human):
 
         Child.num_of_children += 1
 
+    def __repr__(self):
+        return "('{}', '{}', '{}', '{}')".format(self.id, self.first_name, self.lest_name, self.address)
 
-class Accompanier(Human):
-    number_of_accompaniers = 0
-
-    def __init__(self, ID, first_name, lest_name, address, contacts, preferences, history, special):
-        super().__init__(ID, first_name, lest_name, address, contacts)
-        self.preferences = preferences
-        self.history = history
-        self.special = special
-
-        Accompanier.number_of_accompaniers += 1
+    def __str__(self):
+        return "({}, {} {}: {})".format(self.id, self.first_name, self.lest_name, self.address)

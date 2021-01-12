@@ -10,7 +10,7 @@ import numpy as np
 import openpyxl
 
 from clCar import Car
-from clHuman import Child
+from clChild import Child
 from clSchool import School
 from k_means import k_means
 from datetime import timedelta
@@ -168,7 +168,7 @@ def load_data(data_file):
         list_of_all_children.insert((number_row - 2), ch)
 
     # Reading from excel file from Car table
-    cars_sheet = excel_file.worksheets[2]
+    cars_sheet = excel_file.worksheets[1]
     number_of_cars = cars_sheet.max_row - 1
     list_of_cars = []
     # get cars data from data sheet
@@ -176,7 +176,7 @@ def load_data(data_file):
         list_of_cars.insert((number_row - 2), (Car(cars_sheet, number_row)))
 
     # Reading from excel file from School table
-    schools_sheet = excel_file.worksheets[4]
+    schools_sheet = excel_file.worksheets[2]
 
     list_of_school = []
     for number_row in range(2, 3):
@@ -186,6 +186,10 @@ def load_data(data_file):
 
 
 def calculate(number_of_children, list_of_all_children, list_of_cars, list_of_school, k_count):
+    if k_count > len(list_of_cars):
+        raise ValueError(f'K ({k_count}) bigger than the amount of defined transports in the '
+                         f'data file ({len(list_of_cars)})')
+
     # Enter the school's address to the matrix
     temp_point = list_of_school[0].address
     (x_1, y_1) = temp_point.split(',')
@@ -211,6 +215,9 @@ def calculate(number_of_children, list_of_all_children, list_of_cars, list_of_sc
 
     divide_list_of_children, means, clusters = divide_list_of_children_by_k_means(k_count,
                                                                                   point_list, list_of_all_children)
+    for i, cluster in enumerate(clusters):
+        if len(cluster) >= 14:
+            raise ValueError(f"resulting cluster {i} is larger than 14")
 
     # Plot cluster image
     # scatter each cluster's points on the plot
