@@ -26,7 +26,21 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="484e1646-5185-4c07-abee-eea6e8682f7f" name="Default Changelist" comment="edit with tom" />
+    <list default="true" id="484e1646-5185-4c07-abee-eea6e8682f7f" name="Default Changelist" comment="delete clPath">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Groups0.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Groups0.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Groups1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Groups1.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Groups2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Groups2.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Groups3.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Groups3.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Worksheet.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Worksheet.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/G0.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/G0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/G1.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/G1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/G2.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/G2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/G3.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/G3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GT.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/GT.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/clustering.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/clustering.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +56,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="omri" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,7 +71,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../למידה עמוקה עבור ראיית מכונה/פרויקט" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../אלגוריתמים לטקסטים ורצפים" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.ui_main">
@@ -148,21 +162,14 @@
       <option name="presentableId" value="Default" />
       <updated>1610225388866</updated>
     </task>
-    <task id="LOCAL-00001" summary="add clPath">
-      <created>1610613961700</created>
+    <task id="LOCAL-00001" summary="delete clPath">
+      <created>1610616615047</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1610613961700</updated>
+      <updated>1610616615047</updated>
     </task>
-    <task id="LOCAL-00002" summary="add clPath">
-      <created>1610614003722</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1610614003722</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,71 +197,92 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add clPath" />
-    <option name="LAST_COMMIT_MESSAGE" value="add clPath" />
+    <MESSAGE value="delete clPath" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete clPath" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="544" height="466" key="DebuggerActiveHint" timestamp="1610384513495">
+    <state width="632" height="466" key="DebuggerActiveHint" timestamp="1610640566022">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="544" height="466" key="DebuggerActiveHint/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610384513495" />
-    <state x="-1245" y="218" key="FileChooserDialogImpl" timestamp="1610546251454">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state width="632" height="466" key="DebuggerActiveHint/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610640566022" />
+    <state x="540" y="174" key="FileChooserDialogImpl" timestamp="1610627809652">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="-1245" y="218" key="FileChooserDialogImpl/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610546251454" />
-    <state x="540" y="174" key="FileChooserDialogImpl/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610270875732" />
-    <state width="1899" height="294" key="GridCell.Tab.0.bottom" timestamp="1610544974273">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="540" y="174" key="FileChooserDialogImpl/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610627809652" />
+    <state width="1515" height="220" key="GridCell.Tab.0.bottom" timestamp="1610651293196">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1899" height="294" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610544974273" />
-    <state width="1515" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610481327331" />
+    <state width="1899" height="363" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610633507983" />
+    <state width="1515" height="220" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610651293196" />
     <state width="1515" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1610225719775" />
-    <state width="1899" height="294" key="GridCell.Tab.0.center" timestamp="1610544974273">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state width="1515" height="220" key="GridCell.Tab.0.center" timestamp="1610651293192">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1899" height="294" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610544974273" />
-    <state width="1515" height="223" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610481327330" />
+    <state width="1899" height="363" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610633507982" />
+    <state width="1515" height="220" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610651293192" />
     <state width="1515" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1610225719774" />
-    <state width="1899" height="294" key="GridCell.Tab.0.left" timestamp="1610544974273">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state width="1515" height="220" key="GridCell.Tab.0.left" timestamp="1610651293192">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1899" height="294" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610544974273" />
-    <state width="1515" height="223" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610481327330" />
+    <state width="1899" height="363" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610633507982" />
+    <state width="1515" height="220" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610651293192" />
     <state width="1515" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1610225719774" />
-    <state width="1899" height="294" key="GridCell.Tab.0.right" timestamp="1610544974273">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state width="1515" height="220" key="GridCell.Tab.0.right" timestamp="1610651293192">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1899" height="294" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610544974273" />
-    <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610481327330" />
+    <state width="1899" height="363" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610633507983" />
+    <state width="1515" height="220" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610651293192" />
     <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1610225719774" />
-    <state width="1515" height="277" key="GridCell.Tab.1.bottom" timestamp="1610480982227">
+    <state width="1515" height="276" key="GridCell.Tab.1.bottom" timestamp="1610651038156">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610480982227" />
-    <state width="1515" height="277" key="GridCell.Tab.1.center" timestamp="1610480982227">
+    <state width="1899" height="363" key="GridCell.Tab.1.bottom/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610633507983" />
+    <state width="1515" height="276" key="GridCell.Tab.1.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610651038156" />
+    <state width="1515" height="276" key="GridCell.Tab.1.center" timestamp="1610651038152">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="277" key="GridCell.Tab.1.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610480982227" />
-    <state width="1515" height="277" key="GridCell.Tab.1.left" timestamp="1610480982227">
+    <state width="1899" height="363" key="GridCell.Tab.1.center/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610633507983" />
+    <state width="1515" height="276" key="GridCell.Tab.1.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610651038152" />
+    <state width="1515" height="276" key="GridCell.Tab.1.left" timestamp="1610651038152">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="277" key="GridCell.Tab.1.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610480982227" />
-    <state width="1515" height="277" key="GridCell.Tab.1.right" timestamp="1610480982227">
+    <state width="1899" height="363" key="GridCell.Tab.1.left/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610633507983" />
+    <state width="1515" height="276" key="GridCell.Tab.1.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610651038152" />
+    <state width="1515" height="276" key="GridCell.Tab.1.right" timestamp="1610651038156">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="277" key="GridCell.Tab.1.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610480982227" />
+    <state width="1899" height="363" key="GridCell.Tab.1.right/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610633507983" />
+    <state width="1515" height="276" key="GridCell.Tab.1.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610651038156" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1610270199531">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610270199531" />
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1610225420500" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1610387898872">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="-1469" y="206" key="Vcs.Push.Dialog.v2" timestamp="1610616621065">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="-1469" y="206" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610616621065" />
     <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610387898872" />
-    <state x="478" y="31" width="626" height="801" key="find.popup" timestamp="1610481656139">
+    <state x="478" y="31" width="626" height="801" key="find.popup" timestamp="1610635415110">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="478" y="31" width="626" height="801" key="find.popup/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610481656139" />
+    <state x="478" y="31" width="626" height="801" key="find.popup/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610635415110" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ui/calcwindow.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/algorithm.py</url>
+          <line>299</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

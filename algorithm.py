@@ -8,6 +8,7 @@ from datetime import datetime
 import numpy as np
 # Reading and Writing from/to excel file
 import openpyxl
+import matplotlib.pyplot as plt
 
 from clCar import Car
 from clChild import Child
@@ -16,6 +17,34 @@ from k_means import k_means
 from datetime import timedelta
 
 Result = namedtuple('Result', 'clusters means, school_point list_of_address_in_short_path')
+
+
+def _calculate_cost_and_time_random(list_of_all_children, k, point_list,
+                                    time_matrix, list_of_car, school):
+    total_cost = 0
+    total_time = 0
+    random.shuffle(list_of_all_children)
+    j = 0
+    divide_list_of_children = [list_of_all_children[x::3] for x in range(k)]
+    for temp_list_of_children in divide_list_of_children:
+        total_cost_per_group = list_of_car[j].driver_cost
+        total_time_per_group = 0
+        length = len(temp_list_of_children)
+        for i in range(length - 1):
+            (cost, time) = list_of_car[j].calculate_cost_time(temp_list_of_children[i].address,
+                                                              temp_list_of_children[i + 1].address,
+                                                              point_list, time_matrix)
+            total_cost_per_group += cost
+            total_time_per_group += time
+        # calculate the time and cost for school
+        (cost, time) = list_of_car[j].calculate_cost_time(temp_list_of_children[length - 1].address, school.address,
+                                                          point_list, time_matrix)
+        total_cost_per_group += cost
+        total_time_per_group += time
+    j += 1
+    total_cost += total_cost_per_group
+    total_time += total_cost_per_group
+    return total_cost, total_time
 
 
 def divide_list_of_children_by_k_means(k, point_list, list_of_all_children):
@@ -94,38 +123,93 @@ def _calculate_time_cost_per_group(list_of_children, car, school,
     short_path = []
     time_for_each_children_on_short_path = []
     flag = 0
-    for temp_list_of_children in _permutation(list_of_children):
-        times = []
-        addresses = [temp_list_of_children[0].address]
-        for i in range(length - 1):
-            (cost, time) = car.calculate_cost_time(temp_list_of_children[i].address,
-                                                   temp_list_of_children[i + 1].address,
+    times_of_all_permutation = []
+    if length < 8:
+        for temp_list_of_children in _permutation(list_of_children):
+            times = []
+            addresses = [temp_list_of_children[0].address]
+            for i in range(length - 1):
+                (cost, time) = car.calculate_cost_time(temp_list_of_children[i].address,
+                                                       temp_list_of_children[i + 1].address,
+                                                       point_list, time_matrix)
+                total_cost_temp_perm += cost
+                total_time_temp_perm += time
+                times.append(time)
+                addresses.append(temp_list_of_children[i + 1].address)
+            # calculate the time and cost for school
+            (cost, time) = car.calculate_cost_time(temp_list_of_children[length - 1].address, school.address,
                                                    point_list, time_matrix)
-            total_cost_temp_perm += cost
-            total_time_temp_perm += time
+            addresses.append(temp_list_of_children[length - 1].address)  # twice
+            addresses.append(school.address)
             times.append(time)
-            addresses.append(temp_list_of_children[i + 1].address)
-        # calculate the time and cost for school
-        (cost, time) = car.calculate_cost_time(temp_list_of_children[length - 1].address, school.address,
-                                               point_list, time_matrix)
-        addresses.append(temp_list_of_children[length - 1].address)  # twice
-        addresses.append(school.address)
-        times.append(time)
-        cost = 0
-        if time > car.tMin:
-            cost = (time - car.tMin) * car.cost_per_minute
-        cost = car.driver_cost + cost
-        total_cost_temp_perm = cost  # += cost
-        total_time_temp_perm += time
+            cost = 0
+            if time > car.tMin:
+                cost = (time - car.tMin) * car.cost_per_minute
+            cost = car.driver_cost + cost
+            total_cost_temp_perm = cost  # += cost
+            total_time_temp_perm += time
 
-        if total_time_temp_perm < total_time or flag == 0:
-            flag = 1
-            short_path = temp_list_of_children
-            total_time = total_time_temp_perm
-            total_cost = total_cost_temp_perm
-            time_for_each_children_on_short_path = times.copy()
-        total_cost_temp_perm = car.driver_cost
-        total_time_temp_perm = 0
+            times_of_all_permutation.append(total_time_temp_perm)
+
+            if total_time_temp_perm < total_time or flag == 0:
+                flag = 1
+                short_path = temp_list_of_children
+                total_time = total_time_temp_perm
+                total_cost = total_cost_temp_perm
+                time_for_each_children_on_short_path = times.copy()
+
+            total_cost_temp_perm = car.driver_cost
+            total_time_temp_perm = 0
+    else:
+        for j in range(10000):
+            temp_list_of_children = np.random.permutation(list_of_children)
+            times = []
+            addresses = [temp_list_of_children[0].address]
+            for i in range(length - 1):
+                (cost, time) = car.calculate_cost_time(temp_list_of_children[i].address,
+                                                       temp_list_of_children[i + 1].address,
+                                                       point_list, time_matrix)
+                total_cost_temp_perm += cost
+                total_time_temp_perm += time
+                times.append(time)
+                addresses.append(temp_list_of_children[i + 1].address)
+            # calculate the time and cost for school
+            (cost, time) = car.calculate_cost_time(temp_list_of_children[length - 1].address, school.address,
+                                                   point_list, time_matrix)
+            addresses.append(temp_list_of_children[length - 1].address)  # twice
+            addresses.append(school.address)
+            times.append(time)
+            cost = 0
+            if time > car.tMin:
+                cost = (time - car.tMin) * car.cost_per_minute
+            cost = car.driver_cost + cost
+            total_cost_temp_perm = cost  # += cost
+            total_time_temp_perm += time
+
+            times_of_all_permutation.append(total_time_temp_perm)
+
+            if total_time_temp_perm < total_time or flag == 0:
+                flag = 1
+                short_path = temp_list_of_children
+                total_time = total_time_temp_perm
+                total_cost = total_cost_temp_perm
+                time_for_each_children_on_short_path = times.copy()
+
+            total_cost_temp_perm = car.driver_cost
+            total_time_temp_perm = 0
+
+    # Turn interactive plotting off
+    plt.ioff()
+    ypos = np.arange(len(times_of_all_permutation))
+    plt.ylabel("time")
+    plt.xlabel("Routes")
+    plt.title("Histogram of group:" + str(group_number))
+    barlist = plt.bar(ypos, times_of_all_permutation)
+    i = times_of_all_permutation.index(total_time)
+    barlist[i].set_color('r')
+    plt.title("Histogram of group:" + str(group_number))
+    plt.savefig("output/Histogram of group" + str(group_number) + ".jpg")
+    plt.clf()
 
     temp = 0
     length = len(time_for_each_children_on_short_path)
@@ -146,7 +230,7 @@ def _calculate_time_cost_per_group(list_of_children, car, school,
     (x, y) = (float(x), float(y))
     list_of_address_in_short_path.append((x, y))
 
-    return list_of_address_in_short_path
+    return list_of_address_in_short_path, total_time, total_cost
 
 
 def load_data(data_file):
@@ -213,33 +297,41 @@ def calculate(number_of_children, list_of_all_children, list_of_cars, list_of_sc
         for j in range(length_list_of_all_children + 1):
             time_matrix[i, j] = math.ceil(_calculate_euclidean_dist(point_list[i], point_list[j]))
 
+    (random_cost, random_time) = _calculate_cost_and_time_random(list_of_all_children, k_count, point_list, time_matrix,
+                                                                 list_of_cars, list_of_school[0])
+
     divide_list_of_children, means, clusters = divide_list_of_children_by_k_means(k_count,
                                                                                   point_list, list_of_all_children)
     for i, cluster in enumerate(clusters):
         if len(cluster) >= 14:
             raise ValueError(f"resulting cluster {i} is larger than 14")
 
-    # Plot cluster image
-    # scatter each cluster's points on the plot
-    # plt.scatter(*zip(*clusters[0]), color=node_color[0])
-    # plt.scatter(*zip(*clusters[1]), color=node_color[1])
-    # plt.scatter(*zip(*clusters[2]), color=node_color[2])
-    # Add means to the image
-    # center points
-    # plt.scatter(*zip(*means), color='black', s=150)
-
-    # plt.savefig('cluster.png')
-    # To delete all the nodes and edges
-    # plt.clf()
-
     length = len(divide_list_of_children)
     list_of_address_in_short_path = [None] * length
+
+    total_cost_k_means = 0
+    total_time_k_means = 0
     for i in range(length):
         print('calc time cost', i)
-        list_of_address_in_short_path[i] = _calculate_time_cost_per_group(divide_list_of_children[i], list_of_cars[i],
-                                                                          list_of_school[0], point_list, time_matrix,
-                                                                          length_list_of_all_children, group_number=i)
+        (list_of_address_in_short_path[i], total_time_per_group, total_cost_per_group) = _calculate_time_cost_per_group(
+            divide_list_of_children[i], list_of_cars[i],
+            list_of_school[0], point_list, time_matrix,
+            length_list_of_all_children, group_number=i)
+        total_cost_k_means += total_cost_per_group
+        total_time_k_means += total_time_per_group
         print('done', i)
+
+    label_bar_chart = ['random result', 'algorithm result']
+    random_result = [random_cost, random_time]
+    algorithm_result = [total_cost_k_means, total_time_k_means]
+    xpos = np.arange(len(label_bar_chart))
+    plt.xticks(xpos, label_bar_chart)
+    plt.title("Comparison between algorithm and random")
+    plt.bar(xpos - 0.2, random_result, width=0.4, label="random result")
+    plt.bar(xpos + 0.2, algorithm_result, width=0.4, label="algorithm result")
+    plt.legend()
+    plt.savefig("output/Histogram of result.jpg")
+    plt.clf()
 
     return Result(clusters, means, (x_1, y_1), list_of_address_in_short_path)
 
