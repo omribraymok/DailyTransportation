@@ -26,12 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="484e1646-5185-4c07-abee-eea6e8682f7f" name="Default Changelist" comment="edit with tom">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups1.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups2.xlsx" beforeDir="false" />
-    </list>
+    <list default="true" id="484e1646-5185-4c07-abee-eea6e8682f7f" name="Default Changelist" comment="edit with tom" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,6 +148,21 @@
       <option name="presentableId" value="Default" />
       <updated>1610225388866</updated>
     </task>
+    <task id="LOCAL-00001" summary="add clPath">
+      <created>1610613961700</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610613961700</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add clPath">
+      <created>1610614003722</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610614003722</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +188,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add clPath" />
+    <option name="LAST_COMMIT_MESSAGE" value="add clPath" />
   </component>
   <component name="WindowStateProjectService">
     <state width="544" height="466" key="DebuggerActiveHint" timestamp="1610384513495">
