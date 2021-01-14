@@ -26,20 +26,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="484e1646-5185-4c07-abee-eea6e8682f7f" name="Default Changelist" comment="adding GUI">
+    <list default="true" id="484e1646-5185-4c07-abee-eea6e8682f7f" name="Default Changelist" comment="edit with tom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups0.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Groups0.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Groups1.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Groups2.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups3.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Worksheet.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Worksheet.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clHuman.py" beforeDir="false" afterPath="$PROJECT_DIR$/clChild.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consts.py" beforeDir="false" afterPath="$PROJECT_DIR$/consts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs.py" beforeDir="false" afterPath="$PROJECT_DIR$/graphs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/calcwindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/calcwindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Groups0.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Groups1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Groups2.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +45,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="omri" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1mqe8UIaS0mskOejVHZDmwm4KqD" />
@@ -66,7 +62,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../למידה עמוקה עבור ראיית מכונה/פרויקט" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.ui_main">
@@ -143,6 +139,8 @@
         <item itemvalue="Python.ui_main" />
         <item itemvalue="Python.random_number" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.ui_main" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -186,28 +184,33 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="544" height="466" key="DebuggerActiveHint/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610384513495" />
-    <state x="540" y="174" key="FileChooserDialogImpl" timestamp="1610270875732">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="-1245" y="218" key="FileChooserDialogImpl" timestamp="1610546251454">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="-1245" y="218" key="FileChooserDialogImpl/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610546251454" />
     <state x="540" y="174" key="FileChooserDialogImpl/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610270875732" />
-    <state width="1515" height="223" key="GridCell.Tab.0.bottom" timestamp="1610481327331">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1899" height="294" key="GridCell.Tab.0.bottom" timestamp="1610544974273">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="1899" height="294" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610544974273" />
     <state width="1515" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610481327331" />
     <state width="1515" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1610225719775" />
-    <state width="1515" height="223" key="GridCell.Tab.0.center" timestamp="1610481327330">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1899" height="294" key="GridCell.Tab.0.center" timestamp="1610544974273">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="1899" height="294" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610544974273" />
     <state width="1515" height="223" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610481327330" />
     <state width="1515" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1610225719774" />
-    <state width="1515" height="223" key="GridCell.Tab.0.left" timestamp="1610481327330">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1899" height="294" key="GridCell.Tab.0.left" timestamp="1610544974273">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="1899" height="294" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610544974273" />
     <state width="1515" height="223" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610481327330" />
     <state width="1515" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1610225719774" />
-    <state width="1515" height="223" key="GridCell.Tab.0.right" timestamp="1610481327330">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1899" height="294" key="GridCell.Tab.0.right" timestamp="1610544974273">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="1899" height="294" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610544974273" />
     <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610481327330" />
     <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1610225719774" />
     <state width="1515" height="277" key="GridCell.Tab.1.bottom" timestamp="1610480982227">
@@ -239,16 +242,5 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="478" y="31" width="626" height="801" key="find.popup/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610481656139" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ui/calcwindow.py</url>
-          <line>74</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
