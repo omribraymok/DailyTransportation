@@ -42,10 +42,9 @@ class Car:
         return self.wheelchair
 
     # Calculation of time and cost
-    def calculate_cost_time(self, address_1, address_2, point_list, time_matrix):
+    def calculate_time(self, address_1, address_2, point_list, time_matrix):
         time_of_path = find_time_travel_in_matrix(address_1, address_2, point_list, time_matrix)
-        cost_of_path = self.cost_per_minute * time_of_path
-        return cost_of_path, time_of_path
+        return time_of_path
 
 
 # Finding the time travel from starting point to ending point in the time matrix
