@@ -39,6 +39,11 @@
       <change beforePath="$PROJECT_DIR$/output/G2.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/G2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/G3.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/G3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/GT.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/GT.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Histogram of group0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Histogram of group1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Histogram of group2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Histogram of group3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Histogram of result.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output/clustering.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/clustering.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +154,7 @@
         <item itemvalue="Python.random_number" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.ui_main" />
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.random_number" />
       </list>
     </recent_temporary>
   </component>
@@ -210,29 +215,29 @@
     </state>
     <state x="-1245" y="218" key="FileChooserDialogImpl/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610546251454" />
     <state x="540" y="174" key="FileChooserDialogImpl/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610627809652" />
-    <state width="1515" height="220" key="GridCell.Tab.0.bottom" timestamp="1610651293196">
+    <state width="1515" height="220" key="GridCell.Tab.0.bottom" timestamp="1610697121561">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1899" height="363" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610633507983" />
-    <state width="1515" height="220" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610651293196" />
+    <state width="1515" height="220" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610697121561" />
     <state width="1515" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1610225719775" />
-    <state width="1515" height="220" key="GridCell.Tab.0.center" timestamp="1610651293192">
+    <state width="1515" height="220" key="GridCell.Tab.0.center" timestamp="1610697121561">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1899" height="363" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610633507982" />
-    <state width="1515" height="220" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610651293192" />
+    <state width="1515" height="220" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610697121561" />
     <state width="1515" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1610225719774" />
-    <state width="1515" height="220" key="GridCell.Tab.0.left" timestamp="1610651293192">
+    <state width="1515" height="220" key="GridCell.Tab.0.left" timestamp="1610697121560">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1899" height="363" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610633507982" />
-    <state width="1515" height="220" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610651293192" />
+    <state width="1515" height="220" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610697121560" />
     <state width="1515" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1610225719774" />
-    <state width="1515" height="220" key="GridCell.Tab.0.right" timestamp="1610651293192">
+    <state width="1515" height="220" key="GridCell.Tab.0.right" timestamp="1610697121561">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1899" height="363" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610633507983" />
-    <state width="1515" height="220" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610651293192" />
+    <state width="1515" height="220" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610697121561" />
     <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1610225719774" />
     <state width="1515" height="276" key="GridCell.Tab.1.bottom" timestamp="1610651038156">
       <screen x="0" y="0" width="1536" height="864" />
@@ -259,11 +264,12 @@
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610270199531" />
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1610225420500" />
-    <state x="-1469" y="206" key="Vcs.Push.Dialog.v2" timestamp="1610616621065">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1610657338808">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="-1469" y="206" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610616621065" />
     <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610387898872" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1610657338808" />
     <state x="478" y="31" width="626" height="801" key="find.popup" timestamp="1610635415110">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -276,11 +282,6 @@
           <url>file://$PROJECT_DIR$/ui/calcwindow.py</url>
           <line>74</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/algorithm.py</url>
-          <line>299</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

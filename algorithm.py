@@ -209,7 +209,7 @@ def _calculate_time_cost_per_group(list_of_children, car, school,
     barlist[i].set_color('r')
     plt.title("Histogram of group:" + str(group_number))
     plt.savefig("output/Histogram of group" + str(group_number) + ".jpg")
-    plt.clf()
+    plt.cla()
 
     temp = 0
     length = len(time_for_each_children_on_short_path)
@@ -297,9 +297,6 @@ def calculate(number_of_children, list_of_all_children, list_of_cars, list_of_sc
         for j in range(length_list_of_all_children + 1):
             time_matrix[i, j] = math.ceil(_calculate_euclidean_dist(point_list[i], point_list[j]))
 
-    (random_cost, random_time) = _calculate_cost_and_time_random(list_of_all_children, k_count, point_list, time_matrix,
-                                                                 list_of_cars, list_of_school[0])
-
     divide_list_of_children, means, clusters = divide_list_of_children_by_k_means(k_count,
                                                                                   point_list, list_of_all_children)
     for i, cluster in enumerate(clusters):
@@ -321,7 +318,10 @@ def calculate(number_of_children, list_of_all_children, list_of_cars, list_of_sc
         total_time_k_means += total_time_per_group
         print('done', i)
 
-    label_bar_chart = ['random result', 'algorithm result']
+    (random_cost, random_time) = _calculate_cost_and_time_random(list_of_all_children, k_count, point_list, time_matrix,
+                                                                 list_of_cars, list_of_school[0])
+
+    label_bar_chart = ['cost', 'time']
     random_result = [random_cost, random_time]
     algorithm_result = [total_cost_k_means, total_time_k_means]
     xpos = np.arange(len(label_bar_chart))
@@ -331,7 +331,7 @@ def calculate(number_of_children, list_of_all_children, list_of_cars, list_of_sc
     plt.bar(xpos + 0.2, algorithm_result, width=0.4, label="algorithm result")
     plt.legend()
     plt.savefig("output/Histogram of result.jpg")
-    plt.clf()
+    plt.cla()
 
     return Result(clusters, means, (x_1, y_1), list_of_address_in_short_path)
 
