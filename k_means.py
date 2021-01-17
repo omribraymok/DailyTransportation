@@ -3,9 +3,6 @@ import sys
 from random import shuffle, uniform
 
 
-# https://www.geeksforgeeks.org/k-means-clustering-introduction/
-
-###_Auxiliary Function_###
 def FindColMinMax(items):
     n = len(items[0])
     minima = [sys.maxsize for i in range(n)]
@@ -136,7 +133,6 @@ def FindClusters(means, items):
     return clusters
 
 
-###_Main_###
 def k_means(items, k):
     means = CalculateMeans(k, items)
     clusters = FindClusters(means, items)
