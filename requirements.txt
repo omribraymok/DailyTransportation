@@ -4,3 +4,4 @@ matplotlib~=3.3.3
 networkx~=2.5
 PyQt5~=5.15.2
 PyQtChart~=5.15.2
+mlrose~=1.3.0

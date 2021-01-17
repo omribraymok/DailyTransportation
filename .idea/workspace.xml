@@ -26,26 +26,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="484e1646-5185-4c07-abee-eea6e8682f7f" name="Default Changelist" comment="Bug of histogram fix">
+    <list default="true" id="484e1646-5185-4c07-abee-eea6e8682f7f" name="Default Changelist" comment="Final project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups1.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups2.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups3.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Worksheet.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Worksheet.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k_means.py" beforeDir="false" afterPath="$PROJECT_DIR$/k_means.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/G0.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output/G1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output/G2.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output/G3.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output/GT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Histogram of group0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Histogram of group1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Histogram of group2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Histogram of group3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Histogram of result.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output/clustering.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +51,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="omri" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -280,20 +269,44 @@
     <state width="1899" height="363" key="GridCell.Tab.1.right/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610633507983" />
     <state width="1515" height="323" key="GridCell.Tab.1.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610877152240" />
     <state width="1515" height="276" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1610741009349" />
+    <state x="-1582" y="176" key="MergeDialog" timestamp="1610913566912">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1582" y="176" key="MergeDialog/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610913566912" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1610270199531">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610270199531" />
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1610225420500" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1610740997603">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="-1469" y="206" key="Vcs.Push.Dialog.v2" timestamp="1610915061809">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1469" y="206" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610616621065" />
+    <state x="-1469" y="206" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610915061809" />
     <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610697411699" />
     <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1610740997603" />
     <state x="478" y="31" width="626" height="801" key="find.popup" timestamp="1610635415110">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="478" y="31" width="626" height="801" key="find.popup/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1610635415110" />
+    <state x="-1282" y="253" key="git4idea.branch.GitSmartOperationDialog" timestamp="1610913578977">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1282" y="253" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610913578977" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ui/calcwindow.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/algorithm.py</url>
+          <line>395</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
