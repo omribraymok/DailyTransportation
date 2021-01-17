@@ -72,8 +72,7 @@ def divide_list_of_children_by_k_means(k, point_list, list_of_all_children):
     return divide_list_of_children, means, clusters
 
 
-# Python function to get permutations of a given list
-# https://www.geeksforgeeks.org/generate-all-the-permutation-of-a-list-in-python/
+# Function to get permutations of a given list
 def _permutation(lst):
     # If lst is empty then there are no permutations
     if len(lst) == 0:
@@ -189,19 +188,6 @@ def _calculate_cost_time_per_group(list_of_children, car, school,
 
             total_time_temp_perm = 0
 
-    # Turn interactive plotting off
-    plt.ioff()
-    ypos = np.arange(len(times_of_all_permutation))
-    plt.ylabel("time")
-    plt.xlabel("Routes")
-    plt.title("Histogram of group:" + str(group_number))
-    barlist = plt.bar(ypos, times_of_all_permutation)
-    i = times_of_all_permutation.index(total_time)
-    barlist[i].set_color('r')
-    plt.title("Histogram of group:" + str(group_number))
-    plt.savefig("output/Histogram of group" + str(group_number) + ".jpg")
-    plt.cla()
-
     temp = 0
     length = len(time_for_each_children_on_short_path)
     for i in range(length - 1, -1, -1):
@@ -309,19 +295,45 @@ def calculate(number_of_children, list_of_all_children, list_of_cars, list_of_sc
         total_time_k_means += total_time_per_group
         print('done', i)
 
-    (random_cost, random_time) = _calculate_cost_time_random(list_of_all_children, k_count, point_list, time_matrix,
-                                                             list_of_cars, list_of_school[0])
+    random_time_list = []
+    random_cost_list = []
+    for i in range(1000):
+        (random_cost, random_time) = _calculate_cost_time_random(list_of_all_children, k_count, point_list, time_matrix,
+                                                                 list_of_cars, list_of_school[0])
+        random_time_list.append(random_time)
+        random_cost_list.append(random_cost)
+    random_cost = 0
+    random_time = 0
+    for i in range(1000):
+        random_cost += random_cost_list[i]
+        random_time += random_time_list[i]
 
     label_bar_chart = ['cost', 'time']
-    random_result = [random_cost, random_time]
+    random_result = [random_cost / 1000, random_time / 1000]
     algorithm_result = [total_cost_k_means, total_time_k_means]
     xpos = np.arange(len(label_bar_chart))
+    plt.ioff()
     plt.xticks(xpos, label_bar_chart)
     plt.title("Comparison between algorithm and random")
     plt.bar(xpos - 0.2, random_result, width=0.4, label="random result")
     plt.bar(xpos + 0.2, algorithm_result, width=0.4, label="algorithm result")
     plt.legend()
-    plt.savefig("output/Histogram of result.jpg")
+    plt.savefig("output/Histogram of result1.jpg")
+    plt.cla()
+
+    random_time_list.append(total_time_k_means)
+
+    # matplotlib histogram
+    plt.ioff()
+    plt.hist(random_time_list, color='blue', edgecolor='black',
+             bins=int(180 / 5))
+    i = random_time_list.index(total_time_k_means)
+    plt.hist(random_time_list[i], color='red', edgecolor='black',
+             bins=int(180 / 5))
+    plt.title('Histogram of result')
+    plt.ylabel('Results')
+    plt.xlabel('Times')
+    plt.savefig("output/Histogram of result2.jpg")
     plt.cla()
 
     return Result(clusters, means, (x_1, y_1), list_of_address_in_short_path)
@@ -330,8 +342,9 @@ def calculate(number_of_children, list_of_all_children, list_of_cars, list_of_sc
 # Creates an excel file for each group
 # that contains the travel path, cost and travel time
 def print_to_excel_time_cost_per_group(lst, car, cost, time, time_for_each_children_on_short_path, time_matrix, school,
-                                       length_list_of_all_children, group_number, spath="myPath", sschool="mySchool",
+                                       length_list_of_all_children, group_number, spath="529",
                                        timeOfStart=timedelta(hours=7)):
+    sschool = str(school.name)
     # create workbook
     wb = openpyxl.Workbook()
     # get worksheet
@@ -420,4 +433,4 @@ def print_to_excel_time_cost_per_group(lst, car, cost, time, time_for_each_child
     tab.value = "time"
     tab = ws.cell(row=irow, column=2)
     tab.value = str(time)
-    wb.save("Groups" + str(group_number) + ".xlsx")
+    wb.save("output/Groups" + str(group_number) + ".xlsx")
